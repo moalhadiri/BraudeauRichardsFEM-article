@@ -12,11 +12,24 @@ Small 2D and 3D examples for the numerical study of water flow in deformable por
 2. Choose the common 2D and 3D meshes, final time T and time-step indices ℓ. All examples follow these settings automatically.
 3. Choose **Runtime → Run all**, then inspect the console results and figures. The numerical output is also saved as `results.txt`.
 
-The form updates the calculations, figures and session README automatically. Spatial studies use three meshes ending at the selected size; the sphere and Fourier examples use the 3D mesh and smallest selected time step. Dry infiltration uses the 2D spacing and keeps its adaptive time steps. Select `use_separate_settings` only when you want different settings for individual examples. The public GitHub README changes when the repository owner publishes new results.
+The form updates the calculations, figures and session README automatically. Spatial studies use three meshes ending at the selected size; the sphere and Fourier examples use the 3D mesh and smallest selected time step. Dry infiltration uses the 2D spacing and keeps its adaptive time steps. Select `use_separate_settings` only when you want different settings for individual examples. Owner runs can also update the public README and all figures automatically once the private Colab authorization below is configured.
 
 Use a standard CPU runtime; no paid subscription is required. Free runtime availability depends on Colab. See the [Colab FAQ](https://research.google.com/colaboratory/faq.html) for details.
 
 For repeatable results, the notebook uses the checked source revision shown in its setup cell.
+
+<details>
+<summary>Repository owner: enable automatic GitHub updates once</summary>
+
+1. [Create a fine-grained GitHub token](https://github.com/settings/personal-access-tokens/new?name=Braudeau+Colab&description=Publish+computed+example+results&target_name=moalhadiri&expires_in=30&contents=write). Select **Only select repositories**, choose **BraudeauRichardsFEM-article**, and grant **Contents: Read and write**.
+2. In your Colab session, open **Secrets** (the key icon), add **BRAUDEAU_GITHUB_TOKEN**, paste the token as its value, and enable notebook access.
+3. Leave **publish_to_github** enabled in the owner publication cell. **Runtime → Run all** then publishes the README, figures and numerical data after a successful run.
+
+Keep the token in Colab Secrets. Reviewers can run the examples without a token; their results stay in their own session. Publication checks that the connected GitHub account is `moalhadiri` and updates only generated result files. A failed calculation keeps the previous public results.
+
+[GitHub token documentation](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens) · [Colab secret API](https://github.com/googlecolab/colabtools/blob/main/google/colab/userdata.py)
+
+</details>
 
 <!-- BEGINEXAMPLERESULTS -->
 ## Computed results

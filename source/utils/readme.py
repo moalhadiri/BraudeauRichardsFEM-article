@@ -15,6 +15,21 @@ import tempfile
 BEGIN = "<!-- BEGINEXAMPLERESULTS -->"
 END = "<!-- ENDEXAMPLERESULTS -->"
 
+FIGURE_TITLES = {
+    "spatial_errors_2d.png": "Spatial errors in 2D",
+    "spatial_errors_3d.png": "Spatial errors in 3D",
+    "temporal_errors.png": "Temporal errors",
+    "solution_2d.png": "Computed 2D solution",
+    "slotted_sphere.png": "Slotted wet sphere in 3D",
+    "dry_infiltration.png": "Dry infiltration in 2D",
+    "newton_corrections.png": "Newton corrections",
+}
+
+
+def _figure_url(name, metadata):
+    fingerprint = metadata.get("figure_sha256", {}).get(name)
+    return "images/" + name + ("?v=" + fingerprint[:12] if fingerprint else "")
+
 
 def _float(value):
     if value is None:
@@ -110,18 +125,30 @@ def _block(cases, checks, metadata):
         settings_text = (f"Temporal validation: **T = {temporal['final_time']:g}**, "
                          f"**h = 1/{temporal['mesh_2d']}** in 2D and **h = 1/{temporal['mesh_3d']}** in 3D; "
                          f"time-step indices **ℓ = {levels}**.\n\n")
+    gallery = ""
+    extra_figures = [name for name in FIGURE_TITLES if name != "slotted_sphere.png" and name in metadata.get("figure_sha256", {})]
+    if extra_figures:
+        gallery = "<details>\n<summary>All figures from this run</summary>\n\n"
+        for name in extra_figures:
+            gallery += f"### {FIGURE_TITLES[name]}\n\n![{FIGURE_TITLES[name]}]({_figure_url(name, metadata)})\n\n"
+        gallery += "</details>\n\n"
+    reproduce = ""
+    if metadata.get("parameters"):
+        reproduce = ("[Input parameters](data/latest_parameters.json). Reproduce this run with "
+                     "`python test.py --parameters data/latest_parameters.json`.\n\n")
     return (BEGIN + "\n## Computed results\n\n"
             f"**{len(cases)} calculations completed · {len(checks)}/{len(checks)} checks passed.** "
             f"Newton stopping tolerance: `{tolerance}`.\n\n"
             f"Last successful run: **{metadata['generated_utc']}**.{source}\n\n"
             f"{settings_text}"
-            '<p align="center">\n  <img src="images/slotted_sphere.png" width="850" alt="Computed three-dimensional pressure isosurfaces of the slotted sphere, with initial and final fields">\n</p>\n\n'
+            f'<p align="center">\n  <img src="{_figure_url("slotted_sphere.png", metadata)}" width="850" alt="Computed three-dimensional pressure isosurfaces of the slotted sphere, with initial and final fields">\n</p>\n\n'
             "*" + _sphere_caption(cases) + "*\n\n"
             "The table shows the finest spatial grid and smallest time step of each validation group. H¹ is the full norm.\n\n"
             + _table(cases) + "\n\n"
             f"[All {len(cases)} cases: JSON](data/latest_results.json) · [CSV](data/latest_results.csv)\n\n"
-            "To refresh these values locally, run `python test.py --no-show --update-readme`, then commit and push the generated README, image and data files. "
-            "Visitor runs in Colab keep their results in their own session and do not publish to this repository.\n"
+            f"{reproduce}{gallery}"
+            "Owner runs in Colab can publish this README and all figures automatically after the checks pass. "
+            "Visitor runs keep their results in their own session.\n"
             + END)
 
 
@@ -167,15 +194,22 @@ def update_readme(results, checks, images, root, summary_path, parameters=None):
     if len(sphere_images) != 1 or not sphere_images[0].is_file():
         raise ValueError("The computed slotted_sphere.png is missing or ambiguous")
     image_bytes = sphere_images[0].read_bytes()
-    if not image_bytes.startswith(b"\x89PNG\r\n\x1a\n"):
-        raise ValueError("The slotted-sphere image is not a PNG file")
+    figure_bytes = {}
+    for image in images:
+        image = Path(image)
+        if image.name not in FIGURE_TITLES or image.name in figure_bytes:
+            raise ValueError("Unexpected or duplicate figure name")
+        content = image.read_bytes()
+        if not content.startswith(b"\x89PNG\r\n\x1a\n"):
+            raise ValueError("A computed figure is not a PNG file")
+        figure_bytes[image.name] = content
     cases = [_record(case) for case in results]
     if len({case["id"] for case in cases}) != len(cases):
         raise ValueError("Calculation identifiers must be unique")
     revision = os.environ.get("BRAUDEAU_SOURCE_REVISION") or os.environ.get("GITHUB_SHA")
     revision = revision.lower() if revision and re.fullmatch(r"[0-9a-fA-F]{40}|[0-9a-fA-F]{64}", revision) else None
     paths = [root / "test.py", root / "parameters.json"] + sorted((root / "source").rglob("*.py"))
-    paths = [path for path in paths if path.is_file() and path.name not in ("__init__.py", "readme.py", "figures.py")]
+    paths = [path for path in paths if path.is_file() and path.name not in ("__init__.py", "readme.py", "figures.py", "publication.py")]
     source_hashes = {path.relative_to(root).as_posix(): _hash(path.read_bytes().replace(b"\r\n", b"\n")) for path in paths}
     check_data = []
     for check in checks:
@@ -191,7 +225,7 @@ def update_readme(results, checks, images, root, summary_path, parameters=None):
                     parameters=parameter_data, parameters_sha256=_hash(parameter_json.encode("utf8")) if parameter_json is not None else None,
                     numerical_source_sha256_lf=source_hashes,
                     text_summary_sha256_lf=_hash(Path(summary_path).read_bytes().replace(b"\r\n", b"\n")),
-                    image_sha256=_hash(image_bytes), cases=cases, checks=check_data)
+                    image_sha256=_hash(image_bytes), figure_sha256={name: _hash(content) for name, content in figure_bytes.items()}, cases=cases, checks=check_data)
     readme = root / "README.md"
     original = readme.read_text(encoding="utf8")
     updated = _replace_block(original, _block(cases, checks, metadata)).replace("\r\n", "\n").replace("\r", "\n")
@@ -204,6 +238,9 @@ def update_readme(results, checks, images, root, summary_path, parameters=None):
         raise RuntimeError("The README changed while its results were being prepared")
     _write(root / "data/latest_results.json", json_text.encode("utf8"))
     _write(root / "data/latest_results.csv", csv_text.getvalue().encode("utf8"))
-    _write(root / "images/slotted_sphere.png", image_bytes)
+    if parameter_data is not None:
+        _write(root / "data/latest_parameters.json", (json.dumps(parameter_data, indent=2, ensure_ascii=False, allow_nan=False) + "\n").encode("utf8"))
+    for name, content in figure_bytes.items():
+        _write(root / "images" / name, content)
     _write(readme, updated.encode("utf8"))
     return readme
