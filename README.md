@@ -23,7 +23,7 @@ For repeatable results, the notebook uses the checked source revision shown in i
 
 **30 calculations completed · 151/151 checks passed.** Newton stopping tolerance: `1e-8`.
 
-Last successful run: **2026-10-24T18:07:11+00:00**. Source revision: `335f48b16c91`. Parameter fingerprint: `49828ae7a534`.
+Last successful run: **2026-10-24T18:56:40+00:00**. Source revision: `d4130f9f9585`. Parameter fingerprint: `49828ae7a534`.
 
 <p align="center">
   <img src="images/slotted_sphere.png" width="850" alt="Computed three-dimensional pressure isosurfaces of the slotted sphere, with initial and final fields">
