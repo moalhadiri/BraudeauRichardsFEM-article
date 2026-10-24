@@ -21,9 +21,11 @@ For repeatable results, the notebook uses the checked source revision shown in i
 <!-- BEGINEXAMPLERESULTS -->
 ## Computed results
 
-**30 calculations completed · 151/151 checks passed.** Newton stopping tolerance: `1e-8`.
+**26 calculations completed · 115/115 checks passed.** Newton stopping tolerance: `1e-8`.
 
-Last successful run: **2026-10-24T18:56:40+00:00**. Source revision: `d4130f9f9585`. Parameter fingerprint: `49828ae7a534`.
+Last successful run: **2026-10-24T20:35:40+00:00**. Source revision: `5f0126301222`. Parameter fingerprint: `aae8b7d4ae62`.
+
+Temporal validation: **T = 1**, **h = 1/9** in 2D and **h = 1/9** in 3D; time-step indices **ℓ = 1, 2, 3**.
 
 <p align="center">
   <img src="images/slotted_sphere.png" width="850" alt="Computed three-dimensional pressure isosurfaces of the slotted sphere, with initial and final fields">
@@ -37,14 +39,14 @@ The table shows the finest spatial grid and smallest time step of each validatio
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | 2D spatial | Implicit | 1/16 | 3 | 1/40 | 5.823523e-4 | 1.763395e-2 | 3 |
 | 2D spatial | Semi-implicit | 1/16 | 3 | 1/40 | 5.823523e-4 | 1.763395e-2 | 3 |
-| 2D temporal | Implicit | 1/16 | 4 | 1/80 | 5.128790e-4 | 1.556132e-2 | 3 |
-| 2D temporal | Semi-implicit | 1/16 | 4 | 1/80 | 4.323757e-4 | 1.552760e-2 | 3 |
+| 2D temporal | Implicit | 1/9 | 3 | 1/40 | 6.353148e-4 | 1.145151e-2 | 3 |
+| 2D temporal | Semi-implicit | 1/9 | 3 | 1/40 | 4.320047e-4 | 1.146767e-2 | 3 |
 | 3D spatial | Implicit | 1/8 | 3 | 1/40 | 2.849712e-4 | 4.373427e-3 | 3 |
 | 3D spatial | Semi-implicit | 1/8 | 3 | 1/40 | 2.849712e-4 | 4.373427e-3 | 3 |
-| 3D temporal | Implicit | 1/16 | 4 | 1/80 | 4.784780e-5 | 1.347435e-3 | 3 |
-| 3D temporal | Semi-implicit | 1/16 | 4 | 1/80 | 4.046026e-5 | 1.342322e-3 | 3 |
+| 3D temporal | Implicit | 1/9 | 3 | 1/40 | 8.504627e-5 | 1.436968e-3 | 3 |
+| 3D temporal | Semi-implicit | 1/9 | 3 | 1/40 | 7.703710e-5 | 1.425998e-3 | 3 |
 
-[All 30 cases: JSON](data/latest_results.json) · [CSV](data/latest_results.csv)
+[All 26 cases: JSON](data/latest_results.json) · [CSV](data/latest_results.csv)
 
 To refresh these values locally, run `python test.py --no-show --update-readme`, then commit and push the generated README, image and data files. Visitor runs in Colab keep their results in their own session and do not publish to this repository.
 <!-- ENDEXAMPLERESULTS -->
