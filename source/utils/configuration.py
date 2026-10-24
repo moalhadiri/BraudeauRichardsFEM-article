@@ -105,3 +105,23 @@ def load_parameters(path):
         for ell in levels:
             _time_grid(section["final_time"], ell, name)
     return values
+
+
+def automatic_parameters(mesh_2d, mesh_3d, final_time, levels):
+    """Use the common settings for all examples and three spatial grids."""
+    _integer(mesh_2d, "mesh_2d", 4)
+    _integer(mesh_3d, "mesh_3d", 4)
+    _final_time(final_time, "final_time")
+    _unique_integers(levels, "time_levels", 1)
+    for level in levels:
+        _time_grid(final_time, level, "automatic")
+    finest = max(levels)
+    meshes_2d = [max(2, mesh_2d // 4), max(3, mesh_2d // 2), mesh_2d]
+    meshes_3d = [max(2, mesh_3d // 4), max(3, mesh_3d // 2), mesh_3d]
+    return {
+        "spatial": dict(meshes_2d=meshes_2d, meshes_3d=meshes_3d, ell=finest, final_time=final_time),
+        "temporal": dict(mesh_2d=mesh_2d, mesh_3d=mesh_3d, ell=list(levels), final_time=final_time),
+        "fourier": dict(mesh=mesh_3d, ell=finest, final_time=final_time),
+        "sphere": dict(mesh=mesh_3d, ell=finest, final_time=final_time),
+        "dry": dict(mesh_x=2 * mesh_2d, mesh_z=mesh_2d, final_time=final_time),
+    }

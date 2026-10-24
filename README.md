@@ -9,10 +9,10 @@ Small 2D and 3D examples for the numerical study of water flow in deformable por
 ## Run in your browser
 
 1. Click **Choose parameters and run** above. Sign in with Google if prompted.
-2. Change the meshes, final times T and time-step indices ℓ in the form.
+2. Choose the common 2D and 3D meshes, final time T and time-step indices ℓ. All examples follow these settings automatically.
 3. Choose **Runtime → Run all**, then inspect the console results and figures. The numerical output is also saved as `results.txt`.
 
-The form is sufficient for reviewers: mesh sizes and times are entered directly in the browser.
+The form updates the calculations, figures and session README automatically. Spatial studies use three meshes ending at the selected size; the sphere and Fourier examples use the 3D mesh and smallest selected time step. Dry infiltration uses the 2D spacing and keeps its adaptive time steps. Select `use_separate_settings` only when you want different settings for individual examples. The public GitHub README changes when the repository owner publishes new results.
 
 Use a standard CPU runtime; no paid subscription is required. Free runtime availability depends on Colab. See the [Colab FAQ](https://research.google.com/colaboratory/faq.html) for details.
 

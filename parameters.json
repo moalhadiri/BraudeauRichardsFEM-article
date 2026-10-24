@@ -1,20 +1,21 @@
 {
   "spatial": {
     "meshes_2d": [
-      4,
-      8,
-      16
+      3,
+      6,
+      13
     ],
     "meshes_3d": [
-      4,
-      8
+      3,
+      6,
+      13
     ],
     "ell": 3,
     "final_time": 1
   },
   "temporal": {
-    "mesh_2d": 9,
-    "mesh_3d": 9,
+    "mesh_2d": 13,
+    "mesh_3d": 13,
     "ell": [
       1,
       2,
@@ -23,18 +24,18 @@
     "final_time": 1
   },
   "fourier": {
-    "mesh": 8,
-    "ell": 2,
-    "final_time": 0.2
+    "mesh": 13,
+    "ell": 3,
+    "final_time": 1
   },
   "sphere": {
-    "mesh": 16,
-    "ell": 2,
-    "final_time": 0.1
+    "mesh": 13,
+    "ell": 3,
+    "final_time": 1
   },
   "dry": {
-    "mesh_x": 20,
-    "mesh_z": 10,
-    "final_time": 1.0
+    "mesh_x": 26,
+    "mesh_z": 13,
+    "final_time": 1
   }
 }

@@ -69,7 +69,8 @@ def save_figures(results, folder):
                 fig, axes = plt.subplots(1, 2, figsize=(11, 4.6), layout="constrained")
                 for axis, norm in zip(axes, ("L2", "H1")):
                     _errors(axis, cases, norm)
-                fig.suptitle(f"{dimension}D spatial errors")
+                times = ", ".join(f"{time:g}" for time in sorted({float(case["t_final"]) for case in cases}))
+                fig.suptitle(f"{dimension}D spatial errors, T={times}")
                 save(fig, f"spatial_errors_{dimension}d.png")
 
         temporal = [case for case in results if _validation(case) and case.get("time_model") in ("cubic", "exponential")]
@@ -80,7 +81,9 @@ def save_figures(results, folder):
                 cases = [case for case in temporal if case["dimension"] == dimension]
                 for axis, norm in zip(axes[row], ("L2", "H1")):
                     _errors(axis, cases, norm, temporal=True)
-                    axis.set_title(f"{dimension}D")
+                    meshes = ", ".join(f"1/{n - 1}" for n in sorted({int(case["nx"]) for case in cases}))
+                    times = ", ".join(f"{time:g}" for time in sorted({float(case["t_final"]) for case in cases}))
+                    axis.set_title(f"{dimension}D, h={meshes}, T={times}")
             fig.suptitle("Temporal errors")
             save(fig, "temporal_errors.png")
 
