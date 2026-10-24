@@ -1563,5 +1563,14 @@
       "value": 9.688485012462533e-09,
       "tolerance": 1e-08
     }
-  ]
+  ],
+  "figure_sha256": {
+    "spatial_errors_2d.png": "3a4d49e5d379564879c8141a3861299094f597cbc8992d85b3dfc01a23f23b3e",
+    "spatial_errors_3d.png": "f4bbca932a81c9b4611c8fabada436d62793eb2ae059e7aa14704f087a390378",
+    "temporal_errors.png": "2559b436fd2422e98906ef25fd725d492471fd6d280f6bccac9358651e8e1920",
+    "solution_2d.png": "ea2cf4ac76b305db6a0b4bacd1dc38e396352d5e94020c8dedde894940b6486d",
+    "slotted_sphere.png": "b04e69f99639c4bb8777769214705e3f7a431716cd3ac4bf155cec3eb3532e52",
+    "dry_infiltration.png": "b83e3a7de2b5fe83c6acff569c6abb8c51277ea356827cf92244cfd3fb64fd43",
+    "newton_corrections.png": "1565a53b925ade88ef7a529836a46130116da8448b0d19fe999a88f8f7b76ef2"
+  }
 }

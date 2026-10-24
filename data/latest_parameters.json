@@ -1,0 +1,41 @@
+{
+  "dry": {
+    "final_time": 1,
+    "mesh_x": 26,
+    "mesh_z": 13
+  },
+  "fourier": {
+    "ell": 3,
+    "final_time": 1,
+    "mesh": 13
+  },
+  "spatial": {
+    "ell": 3,
+    "final_time": 1,
+    "meshes_2d": [
+      3,
+      6,
+      13
+    ],
+    "meshes_3d": [
+      3,
+      6,
+      13
+    ]
+  },
+  "sphere": {
+    "ell": 3,
+    "final_time": 1,
+    "mesh": 13
+  },
+  "temporal": {
+    "ell": [
+      1,
+      2,
+      3
+    ],
+    "final_time": 1,
+    "mesh_2d": 13,
+    "mesh_3d": 13
+  }
+}

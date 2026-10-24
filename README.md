@@ -41,7 +41,7 @@ Last successful run: **2026-10-24T21:04:09+00:00**. Source revision: `3ddfda3731
 Temporal validation: **T = 1**, **h = 1/13** in 2D and **h = 1/13** in 3D; time-step indices **ℓ = 1, 2, 3**.
 
 <p align="center">
-  <img src="images/slotted_sphere.png" width="850" alt="Computed three-dimensional pressure isosurfaces of the slotted sphere, with initial and final fields">
+  <img src="images/slotted_sphere.png?v=b04e69f99639" width="850" alt="Computed three-dimensional pressure isosurfaces of the slotted sphere, with initial and final fields">
 </p>
 
 *Native P1 pressure isosurfaces at ψ = −3.29 cm, computed on the tetrahedral mesh at t = 0 and t = T, at true geometric scale. Braudeau: h/L = 1/13, τ = 0.025 h, T = 1 h, nx = 14; Garnier: h/L = 1/13, τ = 0.025 h, T = 1 h, nx = 14.*
@@ -61,7 +61,38 @@ The table shows the finest spatial grid and smallest time step of each validatio
 
 [All 28 cases: JSON](data/latest_results.json) · [CSV](data/latest_results.csv)
 
-To refresh these values locally, run `python test.py --no-show --update-readme`, then commit and push the generated README, image and data files. Visitor runs in Colab keep their results in their own session and do not publish to this repository.
+[Input parameters](data/latest_parameters.json). Reproduce this run with `python test.py --parameters data/latest_parameters.json`.
+
+<details>
+<summary>All figures from this run</summary>
+
+### Spatial errors in 2D
+
+![Spatial errors in 2D](images/spatial_errors_2d.png?v=3a4d49e5d379)
+
+### Spatial errors in 3D
+
+![Spatial errors in 3D](images/spatial_errors_3d.png?v=f4bbca932a81)
+
+### Temporal errors
+
+![Temporal errors](images/temporal_errors.png?v=2559b436fd24)
+
+### Computed 2D solution
+
+![Computed 2D solution](images/solution_2d.png?v=ea2cf4ac76b3)
+
+### Dry infiltration in 2D
+
+![Dry infiltration in 2D](images/dry_infiltration.png?v=b83e3a7de2b5)
+
+### Newton corrections
+
+![Newton corrections](images/newton_corrections.png?v=1565a53b925a)
+
+</details>
+
+Owner runs in Colab can publish this README and all figures automatically after the checks pass. Visitor runs keep their results in their own session.
 <!-- ENDEXAMPLERESULTS -->
 
 ## What the test covers
