@@ -103,10 +103,18 @@ def _block(cases, checks, metadata):
     source = f" Source revision: `{revision[:12]}`." if revision else " Source fingerprints are recorded in the JSON file."
     if metadata.get("parameters_sha256"):
         source += f" Parameter fingerprint: `{metadata['parameters_sha256'][:12]}`."
+    settings_text = ""
+    temporal = (metadata.get("parameters") or {}).get("temporal")
+    if temporal:
+        levels = ", ".join(str(level) for level in temporal["ell"])
+        settings_text = (f"Temporal validation: **T = {temporal['final_time']:g}**, "
+                         f"**h = 1/{temporal['mesh_2d']}** in 2D and **h = 1/{temporal['mesh_3d']}** in 3D; "
+                         f"time-step indices **ℓ = {levels}**.\n\n")
     return (BEGIN + "\n## Computed results\n\n"
             f"**{len(cases)} calculations completed · {len(checks)}/{len(checks)} checks passed.** "
             f"Newton stopping tolerance: `{tolerance}`.\n\n"
             f"Last successful run: **{metadata['generated_utc']}**.{source}\n\n"
+            f"{settings_text}"
             '<p align="center">\n  <img src="images/slotted_sphere.png" width="850" alt="Computed three-dimensional pressure isosurfaces of the slotted sphere, with initial and final fields">\n</p>\n\n'
             "*" + _sphere_caption(cases) + "*\n\n"
             "The table shows the finest spatial grid and smallest time step of each validation group. H¹ is the full norm.\n\n"

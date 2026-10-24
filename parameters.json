@@ -10,18 +10,17 @@
       8
     ],
     "ell": 3,
-    "final_time": 0.5
+    "final_time": 1
   },
   "temporal": {
-    "mesh_2d": 16,
-    "mesh_3d": 16,
+    "mesh_2d": 9,
+    "mesh_3d": 9,
     "ell": [
       1,
       2,
-      3,
-      4
+      3
     ],
-    "final_time": 0.5
+    "final_time": 1
   },
   "fourier": {
     "mesh": 8,
