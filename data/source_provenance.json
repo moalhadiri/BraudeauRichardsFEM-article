@@ -1,0 +1,753 @@
+{
+  "description": "Source-level extraction from the article production engines; no source copied from the RichardsEquation example repository.",
+  "files": [
+    {
+      "path": "source/MatrixAssembly/triangles.py",
+      "original": "newton article 1/GMRES-LU/implicit_2d/fem2d.py",
+      "original_sha256": "5f1d012aa0e793539c3748c03f7f7a9f0aafa3b6aef5ade230078e66902751a4",
+      "packaged_sha256": "dd5cdc546b3847e5b013432eb1aeab38214e2a08ffda0b5f52595b7e9bf4924d",
+      "changes": "Imports and comments adapted for this package. Element formulas retain their original operation order."
+    },
+    {
+      "path": "source/MatrixAssembly/implicit2d.py",
+      "original": "newton article 1/GMRES-LU/implicit_2d/fem2d_implicite.py",
+      "original_sha256": "0cd824a021a9bb35a1c783575790821fc39f25b465eac6310816c7d1033e5744",
+      "packaged_sha256": "d2eb98990336fb9ad64c44412fb9942ecef44d22b72ce3bf0130663e1d9b861b",
+      "changes": "Imports and comments adapted for this package. Element formulas retain their original operation order."
+    },
+    {
+      "path": "source/MatrixAssembly/physical2d.py",
+      "original": "newton article 1/Hydrique2D_BraudeauSec_20261022/physical2d_operator.py",
+      "original_sha256": "793bb40a062c7b57ca9141c7d078b39cd8c76eeb541dfcbb503b450b08eccd86",
+      "packaged_sha256": "19d0eb5918b781c30feca7b4cf1a8c20c18c129dec853e9acbe061fea6b82e7c",
+      "changes": "Imports and comments adapted for this package. Element formulas retain their original operation order."
+    },
+    {
+      "path": "source/basisfunctions/tetrahedra.py",
+      "original": "newton article 1/GMRES-LU/physique_5_2/reference_L500/src/FEM/kpde3dgphi.py",
+      "original_sha256": "49788e99d1d2254617c8004c422a9a26f4a39cef235b509c5730cb13734305ce",
+      "packaged_sha256": "a14a98be64ff97efdd1fc263da79dd31743a926f0812116ad7d7b2e54d990d18",
+      "changes": "Imports and comments adapted for this package. Element formulas retain their original operation order."
+    },
+    {
+      "path": "source/LocalGlobalMapping/mesh3d.py",
+      "original": "newton article 1/GMRES-LU/physique_5_2/reference_L500/src/FEM/kpde3dumsh.py",
+      "original_sha256": "085ef4735177e1e26aaad3d0650657c6ae217aeda7f1f017ca261b0853610d24",
+      "packaged_sha256": "bab3408fa19326c6a586b41c96408f04e9c3603637fb7bfe86a064502777fbb5",
+      "changes": "Imports and comments adapted for this package. Element formulas retain their original operation order."
+    },
+    {
+      "path": "source/MatrixAssembly/mass3d.py",
+      "original": "newton article 1/GMRES-LU/physique_5_2/reference_L500/src/FEM/kpde3dmass.py",
+      "original_sha256": "9d6cf459973f051f12c39ca689e776fa5a4b9e8cb4975801a74736d0f6d90d80",
+      "packaged_sha256": "e34939ae0c4dfa9462edc435f74cfe5bc388f7170018103553808be306030aa2",
+      "changes": "Imports and comments adapted for this package. Element formulas retain their original operation order."
+    },
+    {
+      "path": "source/solvers/reference3d.py",
+      "original": "newton article 1/GMRES-LU/physique_5_2/reference_L500/solvers/newton_exact.py",
+      "original_sha256": "2dea53a5578c04a2ea0a7095ea35bd2fff8312532cd45810f9e2b4082fcf5083",
+      "packaged_sha256": "e5a1cf6bcdaa02654f3c1edb562fcd22444d10f3fd875187e05b99ada1eac74a",
+      "changes": "Imports and comments adapted for this package. Element formulas retain their original operation order."
+    },
+    {
+      "path": "source/MatrixAssembly/parallel3d.py",
+      "original": "newton article 1/GMRES-LU/physique_5_2/parallel_exact.py",
+      "original_sha256": "a27294922feb1433af77048dc19a4796c9d8aa7e1c977fa6dae024423fba8a93",
+      "packaged_sha256": "1f1503b13578fd1d86b79e93d088a1fd52bcc71015cd350b160d5fc00a21bacf",
+      "changes": "Imports and comments adapted for this package. Element formulas retain their original operation order. The reference-file integrity check normalizes CRLF/LF newlines for Git portability; numerical formulas are unchanged."
+    },
+    {
+      "path": "source/MatrixAssembly/semi3d.py",
+      "original": "newton article 1/approximation_3D_GMRES_ILU_20261022/semi_implicit/semi_exact.py",
+      "original_sha256": "8ad55002186e4efa8241d4c747082abfe69a7e25f91e8d8f9ce2a0ae89564d57",
+      "packaged_sha256": "ae702225019f3fe335ba0de4d64f30d692da049ca4d5d2682b0436ce2a16f3f7",
+      "changes": "Imports and comments adapted for this package. Element formulas retain their original operation order."
+    },
+    {
+      "path": "source/models/smooth.py",
+      "original": "newton article 1/GMRES-LU/implicit_2d/constitutive.py",
+      "original_sha256": "a89e637f8ced7e12645775fc24432c85da054c182c67a6eec26563e811350cac",
+      "packaged_sha256": "73ffa5dfdd46d57e09f3b8205cd786ba2af3a3cdfb5a8e1167079490aad1e669",
+      "changes": "Imports and comments adapted for this package. Element formulas retain their original operation order."
+    },
+    {
+      "path": "source/models/validation2d.py",
+      "original": "newton article 1/GMRES-LU/implicit_2d/validation_model.py",
+      "original_sha256": "0d9de247714317a22c84d9e5962c2c868b7c213b79a6c7620d517a94373c3506",
+      "packaged_sha256": "1496f6cd803f017b3f0f38b0893dd2a2f3d371fd5e912045b78e5872daebed86",
+      "changes": "Imports and comments adapted for this package. Element formulas retain their original operation order."
+    },
+    {
+      "path": "source/models/validation3d.py",
+      "original": "newton article 1/approximation_3D_GMRES_ILU_20261022/implicit/validation_model.py",
+      "original_sha256": "a89e637f8ced7e12645775fc24432c85da054c182c67a6eec26563e811350cac",
+      "packaged_sha256": "b3fd420d1c15081413bc0a11ca00a8e627e1f85d0896741ee7b7e9f9ab1fce54",
+      "changes": "Imports and comments adapted for this package. Element formulas retain their original operation order."
+    },
+    {
+      "path": "source/models/fourier3d.py",
+      "original": "newton article 1/GMRES-LU/lp3/validation_model.py",
+      "original_sha256": "f1063db6456b8546b6a73cf3beedbe083cc920e958247948c5f97e4b4f5af97b",
+      "packaged_sha256": "bfb40dd55faeb510661a5d3315ba7b660896d71e61ded0713bc5ac2cce95db10",
+      "changes": "Imports and comments adapted for this package. Element formulas retain their original operation order."
+    },
+    {
+      "path": "source/models/physical.py",
+      "original": "newton article 1/GMRES-LU/physique_5_2/reference_L500/src/physique/physical_parallele.py",
+      "original_sha256": "f237644b5a2bf7e9f4f4ecea72c91e137ac39d828d8738c69b5cd121d33fe575",
+      "packaged_sha256": "62054304706d9285eb3c6e2ec1e811dd19f612cff6dd6cdf225c278daa9e4470",
+      "changes": "Imports and comments adapted for this package. Element formulas retain their original operation order."
+    },
+    {
+      "path": "source/models/physical.py",
+      "original": "newton article 1/GMRES-LU/physique_5_2/reference_L500/cas_sphere.py",
+      "original_sha256": "b60814f1a8c74570f44e65e34067bb2b94643d914dbe7a2f17b58a2e16a59ae1",
+      "extracted": "LoisBraudeau class, parameters supplied per instance",
+      "changes": "Class renamed PhysicalLaws; parameter constants read from each instance. Original coefficient formulas are unchanged.",
+      "packaged_sha256": "62054304706d9285eb3c6e2ec1e811dd19f612cff6dd6cdf225c278daa9e4470"
+    },
+    {
+      "path": "source/utils/isosurface.py",
+      "original": "newton article 1/GMRES-LU/physique_5_2/visualize.py",
+      "original_sha256": "2cd766ca0c690ab6a76b44fa4df1782a9e39e4925a66cd4b366df98df2f6611f",
+      "packaged_sha256": "e21b913171dc66e206079a0499a8f28740484d356933109f7ab37ee570cf4d03",
+      "extracted": "extract_isosurface",
+      "changes": "Exact P1 isosurface helper copied without changes to its function body; package header and NumPy import only."
+    }
+  ],
+  "numerical_syntax_checks": [
+    {
+      "packaged_file": "source/MatrixAssembly/triangles.py",
+      "symbol": "mesh",
+      "source_file": "newton article 1/GMRES-LU/implicit_2d/fem2d.py",
+      "identical_executable_syntax": true,
+      "arithmetic_preserved": true
+    },
+    {
+      "packaged_file": "source/MatrixAssembly/triangles.py",
+      "symbol": "_geometry",
+      "source_file": "newton article 1/GMRES-LU/implicit_2d/fem2d.py",
+      "identical_executable_syntax": true,
+      "arithmetic_preserved": true
+    },
+    {
+      "packaged_file": "source/MatrixAssembly/triangles.py",
+      "symbol": "mass_matrix",
+      "source_file": "newton article 1/GMRES-LU/implicit_2d/fem2d.py",
+      "identical_executable_syntax": true,
+      "arithmetic_preserved": true
+    },
+    {
+      "packaged_file": "source/MatrixAssembly/triangles.py",
+      "symbol": "_mean",
+      "source_file": "newton article 1/GMRES-LU/implicit_2d/fem2d.py",
+      "identical_executable_syntax": true,
+      "arithmetic_preserved": true
+    },
+    {
+      "packaged_file": "source/MatrixAssembly/triangles.py",
+      "symbol": "OperateurSemiImplicite2D.__init__",
+      "source_file": "newton article 1/GMRES-LU/implicit_2d/fem2d.py",
+      "identical_executable_syntax": true,
+      "arithmetic_preserved": true
+    },
+    {
+      "packaged_file": "source/MatrixAssembly/triangles.py",
+      "symbol": "OperateurSemiImplicite2D.close",
+      "source_file": "newton article 1/GMRES-LU/implicit_2d/fem2d.py",
+      "identical_executable_syntax": true,
+      "arithmetic_preserved": true
+    },
+    {
+      "packaged_file": "source/MatrixAssembly/triangles.py",
+      "symbol": "OperateurSemiImplicite2D.__enter__",
+      "source_file": "newton article 1/GMRES-LU/implicit_2d/fem2d.py",
+      "identical_executable_syntax": true,
+      "arithmetic_preserved": true
+    },
+    {
+      "packaged_file": "source/MatrixAssembly/triangles.py",
+      "symbol": "OperateurSemiImplicite2D.__exit__",
+      "source_file": "newton article 1/GMRES-LU/implicit_2d/fem2d.py",
+      "identical_executable_syntax": true,
+      "arithmetic_preserved": true
+    },
+    {
+      "packaged_file": "source/MatrixAssembly/triangles.py",
+      "symbol": "OperateurSemiImplicite2D._ordered_tensors",
+      "source_file": "newton article 1/GMRES-LU/implicit_2d/fem2d.py",
+      "identical_executable_syntax": true,
+      "arithmetic_preserved": true
+    },
+    {
+      "packaged_file": "source/MatrixAssembly/triangles.py",
+      "symbol": "OperateurSemiImplicite2D._champs",
+      "source_file": "newton article 1/GMRES-LU/implicit_2d/fem2d.py",
+      "identical_executable_syntax": true,
+      "arithmetic_preserved": true
+    },
+    {
+      "packaged_file": "source/MatrixAssembly/triangles.py",
+      "symbol": "OperateurSemiImplicite2D._freeze",
+      "source_file": "newton article 1/GMRES-LU/implicit_2d/fem2d.py",
+      "identical_executable_syntax": true,
+      "arithmetic_preserved": true
+    },
+    {
+      "packaged_file": "source/MatrixAssembly/triangles.py",
+      "symbol": "OperateurSemiImplicite2D.residu",
+      "source_file": "newton article 1/GMRES-LU/implicit_2d/fem2d.py",
+      "identical_executable_syntax": true,
+      "arithmetic_preserved": true
+    },
+    {
+      "packaged_file": "source/MatrixAssembly/triangles.py",
+      "symbol": "OperateurSemiImplicite2D.jacobien",
+      "source_file": "newton article 1/GMRES-LU/implicit_2d/fem2d.py",
+      "identical_executable_syntax": true,
+      "arithmetic_preserved": true
+    },
+    {
+      "packaged_file": "source/MatrixAssembly/implicit2d.py",
+      "symbol": "OperateurNewtonParallele.residu",
+      "source_file": "newton article 1/GMRES-LU/implicit_2d/fem2d_implicite.py",
+      "identical_executable_syntax": true,
+      "arithmetic_preserved": true
+    },
+    {
+      "packaged_file": "source/MatrixAssembly/implicit2d.py",
+      "symbol": "OperateurNewtonParallele.jacobien",
+      "source_file": "newton article 1/GMRES-LU/implicit_2d/fem2d_implicite.py",
+      "identical_executable_syntax": true,
+      "arithmetic_preserved": true
+    },
+    {
+      "packaged_file": "source/MatrixAssembly/physical2d.py",
+      "symbol": "rectangle_mesh",
+      "source_file": "newton article 1/Hydrique2D_BraudeauSec_20261022/physical2d_operator.py",
+      "identical_executable_syntax": true,
+      "arithmetic_preserved": true
+    },
+    {
+      "packaged_file": "source/MatrixAssembly/physical2d.py",
+      "symbol": "horizontal_flux_weights",
+      "source_file": "newton article 1/Hydrique2D_BraudeauSec_20261022/physical2d_operator.py",
+      "identical_executable_syntax": true,
+      "arithmetic_preserved": true
+    },
+    {
+      "packaged_file": "source/MatrixAssembly/physical2d.py",
+      "symbol": "PhysicalImplicit2D.__init__",
+      "source_file": "newton article 1/Hydrique2D_BraudeauSec_20261022/physical2d_operator.py",
+      "identical_executable_syntax": true,
+      "arithmetic_preserved": true
+    },
+    {
+      "packaged_file": "source/MatrixAssembly/physical2d.py",
+      "symbol": "PhysicalImplicit2D.residu",
+      "source_file": "newton article 1/Hydrique2D_BraudeauSec_20261022/physical2d_operator.py",
+      "identical_executable_syntax": true,
+      "arithmetic_preserved": true
+    },
+    {
+      "packaged_file": "source/MatrixAssembly/physical2d.py",
+      "symbol": "PhysicalImplicit2D.jacobien",
+      "source_file": "newton article 1/Hydrique2D_BraudeauSec_20261022/physical2d_operator.py",
+      "identical_executable_syntax": true,
+      "arithmetic_preserved": true
+    },
+    {
+      "packaged_file": "source/basisfunctions/tetrahedra.py",
+      "symbol": "kpde3dgphi",
+      "source_file": "newton article 1/GMRES-LU/physique_5_2/reference_L500/src/FEM/kpde3dgphi.py",
+      "identical_executable_syntax": true,
+      "arithmetic_preserved": true
+    },
+    {
+      "packaged_file": "source/LocalGlobalMapping/mesh3d.py",
+      "symbol": "kpde3dumsh",
+      "source_file": "newton article 1/GMRES-LU/physique_5_2/reference_L500/src/FEM/kpde3dumsh.py",
+      "identical_executable_syntax": true,
+      "arithmetic_preserved": true
+    },
+    {
+      "packaged_file": "source/MatrixAssembly/mass3d.py",
+      "symbol": "kpde3dmass",
+      "source_file": "newton article 1/GMRES-LU/physique_5_2/reference_L500/src/FEM/kpde3dmass.py",
+      "identical_executable_syntax": false,
+      "arithmetic_preserved": true,
+      "adaptation": "Only the text of ValueError was translated."
+    },
+    {
+      "packaged_file": "source/solvers/reference3d.py",
+      "symbol": "_mean",
+      "source_file": "newton article 1/GMRES-LU/physique_5_2/reference_L500/solvers/newton_exact.py",
+      "identical_executable_syntax": true,
+      "arithmetic_preserved": true
+    },
+    {
+      "packaged_file": "source/solvers/reference3d.py",
+      "symbol": "OperateurNewton.__init__",
+      "source_file": "newton article 1/GMRES-LU/physique_5_2/reference_L500/solvers/newton_exact.py",
+      "identical_executable_syntax": true,
+      "arithmetic_preserved": true
+    },
+    {
+      "packaged_file": "source/solvers/reference3d.py",
+      "symbol": "OperateurNewton._champs",
+      "source_file": "newton article 1/GMRES-LU/physique_5_2/reference_L500/solvers/newton_exact.py",
+      "identical_executable_syntax": true,
+      "arithmetic_preserved": true
+    },
+    {
+      "packaged_file": "source/solvers/reference3d.py",
+      "symbol": "OperateurNewton.residu",
+      "source_file": "newton article 1/GMRES-LU/physique_5_2/reference_L500/solvers/newton_exact.py",
+      "identical_executable_syntax": true,
+      "arithmetic_preserved": true
+    },
+    {
+      "packaged_file": "source/solvers/reference3d.py",
+      "symbol": "OperateurNewton.jacobien",
+      "source_file": "newton article 1/GMRES-LU/physique_5_2/reference_L500/solvers/newton_exact.py",
+      "identical_executable_syntax": true,
+      "arithmetic_preserved": true
+    },
+    {
+      "packaged_file": "source/MatrixAssembly/parallel3d.py",
+      "symbol": "_mean",
+      "source_file": "newton article 1/GMRES-LU/physique_5_2/parallel_exact.py",
+      "identical_executable_syntax": true,
+      "arithmetic_preserved": true
+    },
+    {
+      "packaged_file": "source/MatrixAssembly/parallel3d.py",
+      "symbol": "OperateurNewtonParallele.__init__",
+      "source_file": "newton article 1/GMRES-LU/physique_5_2/parallel_exact.py",
+      "identical_executable_syntax": true,
+      "arithmetic_preserved": true
+    },
+    {
+      "packaged_file": "source/MatrixAssembly/parallel3d.py",
+      "symbol": "OperateurNewtonParallele.close",
+      "source_file": "newton article 1/GMRES-LU/physique_5_2/parallel_exact.py",
+      "identical_executable_syntax": true,
+      "arithmetic_preserved": true
+    },
+    {
+      "packaged_file": "source/MatrixAssembly/parallel3d.py",
+      "symbol": "OperateurNewtonParallele.__enter__",
+      "source_file": "newton article 1/GMRES-LU/physique_5_2/parallel_exact.py",
+      "identical_executable_syntax": true,
+      "arithmetic_preserved": true
+    },
+    {
+      "packaged_file": "source/MatrixAssembly/parallel3d.py",
+      "symbol": "OperateurNewtonParallele.__exit__",
+      "source_file": "newton article 1/GMRES-LU/physique_5_2/parallel_exact.py",
+      "identical_executable_syntax": true,
+      "arithmetic_preserved": true
+    },
+    {
+      "packaged_file": "source/MatrixAssembly/parallel3d.py",
+      "symbol": "OperateurNewtonParallele._ordered_tensors",
+      "source_file": "newton article 1/GMRES-LU/physique_5_2/parallel_exact.py",
+      "identical_executable_syntax": true,
+      "arithmetic_preserved": true
+    },
+    {
+      "packaged_file": "source/MatrixAssembly/parallel3d.py",
+      "symbol": "OperateurNewtonParallele.residu",
+      "source_file": "newton article 1/GMRES-LU/physique_5_2/parallel_exact.py",
+      "identical_executable_syntax": true,
+      "arithmetic_preserved": true
+    },
+    {
+      "packaged_file": "source/MatrixAssembly/parallel3d.py",
+      "symbol": "OperateurNewtonParallele.jacobien",
+      "source_file": "newton article 1/GMRES-LU/physique_5_2/parallel_exact.py",
+      "identical_executable_syntax": true,
+      "arithmetic_preserved": true
+    },
+    {
+      "packaged_file": "source/MatrixAssembly/semi3d.py",
+      "symbol": "OperateurSemiImpliciteParallele.__init__",
+      "source_file": "newton article 1/approximation_3D_GMRES_ILU_20261022/semi_implicit/semi_exact.py",
+      "identical_executable_syntax": true,
+      "arithmetic_preserved": true
+    },
+    {
+      "packaged_file": "source/MatrixAssembly/semi3d.py",
+      "symbol": "OperateurSemiImpliciteParallele._freeze",
+      "source_file": "newton article 1/approximation_3D_GMRES_ILU_20261022/semi_implicit/semi_exact.py",
+      "identical_executable_syntax": true,
+      "arithmetic_preserved": true
+    },
+    {
+      "packaged_file": "source/MatrixAssembly/semi3d.py",
+      "symbol": "OperateurSemiImpliciteParallele.residu",
+      "source_file": "newton article 1/approximation_3D_GMRES_ILU_20261022/semi_implicit/semi_exact.py",
+      "identical_executable_syntax": true,
+      "arithmetic_preserved": true
+    },
+    {
+      "packaged_file": "source/MatrixAssembly/semi3d.py",
+      "symbol": "OperateurSemiImpliciteParallele.jacobien",
+      "source_file": "newton article 1/approximation_3D_GMRES_ILU_20261022/semi_implicit/semi_exact.py",
+      "identical_executable_syntax": true,
+      "arithmetic_preserved": true
+    },
+    {
+      "packaged_file": "source/models/smooth.py",
+      "symbol": "Jet.__init__",
+      "source_file": "newton article 1/GMRES-LU/implicit_2d/constitutive.py",
+      "identical_executable_syntax": true,
+      "arithmetic_preserved": true
+    },
+    {
+      "packaged_file": "source/models/smooth.py",
+      "symbol": "Jet.wrap",
+      "source_file": "newton article 1/GMRES-LU/implicit_2d/constitutive.py",
+      "identical_executable_syntax": true,
+      "arithmetic_preserved": true
+    },
+    {
+      "packaged_file": "source/models/smooth.py",
+      "symbol": "Jet.__add__",
+      "source_file": "newton article 1/GMRES-LU/implicit_2d/constitutive.py",
+      "identical_executable_syntax": true,
+      "arithmetic_preserved": true
+    },
+    {
+      "packaged_file": "source/models/smooth.py",
+      "symbol": "Jet.__neg__",
+      "source_file": "newton article 1/GMRES-LU/implicit_2d/constitutive.py",
+      "identical_executable_syntax": true,
+      "arithmetic_preserved": true
+    },
+    {
+      "packaged_file": "source/models/smooth.py",
+      "symbol": "Jet.__sub__",
+      "source_file": "newton article 1/GMRES-LU/implicit_2d/constitutive.py",
+      "identical_executable_syntax": true,
+      "arithmetic_preserved": true
+    },
+    {
+      "packaged_file": "source/models/smooth.py",
+      "symbol": "Jet.__rsub__",
+      "source_file": "newton article 1/GMRES-LU/implicit_2d/constitutive.py",
+      "identical_executable_syntax": true,
+      "arithmetic_preserved": true
+    },
+    {
+      "packaged_file": "source/models/smooth.py",
+      "symbol": "Jet.__mul__",
+      "source_file": "newton article 1/GMRES-LU/implicit_2d/constitutive.py",
+      "identical_executable_syntax": true,
+      "arithmetic_preserved": true
+    },
+    {
+      "packaged_file": "source/models/smooth.py",
+      "symbol": "Jet.__pow__",
+      "source_file": "newton article 1/GMRES-LU/implicit_2d/constitutive.py",
+      "identical_executable_syntax": true,
+      "arithmetic_preserved": true
+    },
+    {
+      "packaged_file": "source/models/smooth.py",
+      "symbol": "Jet.__truediv__",
+      "source_file": "newton article 1/GMRES-LU/implicit_2d/constitutive.py",
+      "identical_executable_syntax": true,
+      "arithmetic_preserved": true
+    },
+    {
+      "packaged_file": "source/models/smooth.py",
+      "symbol": "Jet.__rtruediv__",
+      "source_file": "newton article 1/GMRES-LU/implicit_2d/constitutive.py",
+      "identical_executable_syntax": true,
+      "arithmetic_preserved": true
+    },
+    {
+      "packaged_file": "source/models/smooth.py",
+      "symbol": "Implicit3DLaws.fields",
+      "source_file": "newton article 1/GMRES-LU/implicit_2d/constitutive.py",
+      "identical_executable_syntax": true,
+      "arithmetic_preserved": true
+    },
+    {
+      "packaged_file": "source/models/smooth.py",
+      "symbol": "Implicit3DLaws.coefficients",
+      "source_file": "newton article 1/GMRES-LU/implicit_2d/constitutive.py",
+      "identical_executable_syntax": true,
+      "arithmetic_preserved": true
+    },
+    {
+      "packaged_file": "source/models/smooth.py",
+      "symbol": "Implicit3DLaws.derivees",
+      "source_file": "newton article 1/GMRES-LU/implicit_2d/constitutive.py",
+      "identical_executable_syntax": true,
+      "arithmetic_preserved": true
+    },
+    {
+      "packaged_file": "source/models/validation2d.py",
+      "symbol": "exact",
+      "source_file": "newton article 1/GMRES-LU/implicit_2d/validation_model.py",
+      "identical_executable_syntax": true,
+      "arithmetic_preserved": true
+    },
+    {
+      "packaged_file": "source/models/validation2d.py",
+      "symbol": "forcing",
+      "source_file": "newton article 1/GMRES-LU/implicit_2d/validation_model.py",
+      "identical_executable_syntax": true,
+      "arithmetic_preserved": true
+    },
+    {
+      "packaged_file": "source/models/validation2d.py",
+      "symbol": "duffy_rule",
+      "source_file": "newton article 1/GMRES-LU/implicit_2d/validation_model.py",
+      "identical_executable_syntax": true,
+      "arithmetic_preserved": true
+    },
+    {
+      "packaged_file": "source/models/validation2d.py",
+      "symbol": "errors",
+      "source_file": "newton article 1/GMRES-LU/implicit_2d/validation_model.py",
+      "identical_executable_syntax": true,
+      "arithmetic_preserved": true
+    },
+    {
+      "packaged_file": "source/models/validation3d.py",
+      "symbol": "time_factor",
+      "source_file": "newton article 1/approximation_3D_GMRES_ILU_20261022/implicit/validation_model.py",
+      "identical_executable_syntax": true,
+      "arithmetic_preserved": true
+    },
+    {
+      "packaged_file": "source/models/validation3d.py",
+      "symbol": "exact",
+      "source_file": "newton article 1/approximation_3D_GMRES_ILU_20261022/implicit/validation_model.py",
+      "identical_executable_syntax": true,
+      "arithmetic_preserved": true
+    },
+    {
+      "packaged_file": "source/models/validation3d.py",
+      "symbol": "forcing",
+      "source_file": "newton article 1/approximation_3D_GMRES_ILU_20261022/implicit/validation_model.py",
+      "identical_executable_syntax": true,
+      "arithmetic_preserved": true
+    },
+    {
+      "packaged_file": "source/models/validation3d.py",
+      "symbol": "duffy_rule",
+      "source_file": "newton article 1/approximation_3D_GMRES_ILU_20261022/implicit/validation_model.py",
+      "identical_executable_syntax": true,
+      "arithmetic_preserved": true
+    },
+    {
+      "packaged_file": "source/models/validation3d.py",
+      "symbol": "errors",
+      "source_file": "newton article 1/approximation_3D_GMRES_ILU_20261022/implicit/validation_model.py",
+      "identical_executable_syntax": true,
+      "arithmetic_preserved": true
+    },
+    {
+      "packaged_file": "source/models/fourier3d.py",
+      "symbol": "Jet.__init__",
+      "source_file": "newton article 1/GMRES-LU/lp3/validation_model.py",
+      "identical_executable_syntax": true,
+      "arithmetic_preserved": true
+    },
+    {
+      "packaged_file": "source/models/fourier3d.py",
+      "symbol": "Jet.wrap",
+      "source_file": "newton article 1/GMRES-LU/lp3/validation_model.py",
+      "identical_executable_syntax": true,
+      "arithmetic_preserved": true
+    },
+    {
+      "packaged_file": "source/models/fourier3d.py",
+      "symbol": "Jet.__add__",
+      "source_file": "newton article 1/GMRES-LU/lp3/validation_model.py",
+      "identical_executable_syntax": true,
+      "arithmetic_preserved": true
+    },
+    {
+      "packaged_file": "source/models/fourier3d.py",
+      "symbol": "Jet.__neg__",
+      "source_file": "newton article 1/GMRES-LU/lp3/validation_model.py",
+      "identical_executable_syntax": true,
+      "arithmetic_preserved": true
+    },
+    {
+      "packaged_file": "source/models/fourier3d.py",
+      "symbol": "Jet.__sub__",
+      "source_file": "newton article 1/GMRES-LU/lp3/validation_model.py",
+      "identical_executable_syntax": true,
+      "arithmetic_preserved": true
+    },
+    {
+      "packaged_file": "source/models/fourier3d.py",
+      "symbol": "Jet.__rsub__",
+      "source_file": "newton article 1/GMRES-LU/lp3/validation_model.py",
+      "identical_executable_syntax": true,
+      "arithmetic_preserved": true
+    },
+    {
+      "packaged_file": "source/models/fourier3d.py",
+      "symbol": "Jet.__mul__",
+      "source_file": "newton article 1/GMRES-LU/lp3/validation_model.py",
+      "identical_executable_syntax": true,
+      "arithmetic_preserved": true
+    },
+    {
+      "packaged_file": "source/models/fourier3d.py",
+      "symbol": "Jet.__pow__",
+      "source_file": "newton article 1/GMRES-LU/lp3/validation_model.py",
+      "identical_executable_syntax": true,
+      "arithmetic_preserved": true
+    },
+    {
+      "packaged_file": "source/models/fourier3d.py",
+      "symbol": "Jet.__truediv__",
+      "source_file": "newton article 1/GMRES-LU/lp3/validation_model.py",
+      "identical_executable_syntax": true,
+      "arithmetic_preserved": true
+    },
+    {
+      "packaged_file": "source/models/fourier3d.py",
+      "symbol": "Jet.__rtruediv__",
+      "source_file": "newton article 1/GMRES-LU/lp3/validation_model.py",
+      "identical_executable_syntax": true,
+      "arithmetic_preserved": true
+    },
+    {
+      "packaged_file": "source/models/fourier3d.py",
+      "symbol": "Jet.exp",
+      "source_file": "newton article 1/GMRES-LU/lp3/validation_model.py",
+      "identical_executable_syntax": true,
+      "arithmetic_preserved": true
+    },
+    {
+      "packaged_file": "source/models/fourier3d.py",
+      "symbol": "ValidationLaws.__init__",
+      "source_file": "newton article 1/GMRES-LU/lp3/validation_model.py",
+      "identical_executable_syntax": true,
+      "arithmetic_preserved": true
+    },
+    {
+      "packaged_file": "source/models/fourier3d.py",
+      "symbol": "ValidationLaws.fields",
+      "source_file": "newton article 1/GMRES-LU/lp3/validation_model.py",
+      "identical_executable_syntax": true,
+      "arithmetic_preserved": true
+    },
+    {
+      "packaged_file": "source/models/fourier3d.py",
+      "symbol": "ValidationLaws.coefficients",
+      "source_file": "newton article 1/GMRES-LU/lp3/validation_model.py",
+      "identical_executable_syntax": true,
+      "arithmetic_preserved": true
+    },
+    {
+      "packaged_file": "source/models/fourier3d.py",
+      "symbol": "ValidationLaws.derivees",
+      "source_file": "newton article 1/GMRES-LU/lp3/validation_model.py",
+      "identical_executable_syntax": true,
+      "arithmetic_preserved": true
+    },
+    {
+      "packaged_file": "source/models/fourier3d.py",
+      "symbol": "exact",
+      "source_file": "newton article 1/GMRES-LU/lp3/validation_model.py",
+      "identical_executable_syntax": true,
+      "arithmetic_preserved": true
+    },
+    {
+      "packaged_file": "source/models/fourier3d.py",
+      "symbol": "forcing",
+      "source_file": "newton article 1/GMRES-LU/lp3/validation_model.py",
+      "identical_executable_syntax": true,
+      "arithmetic_preserved": true
+    },
+    {
+      "packaged_file": "source/models/fourier3d.py",
+      "symbol": "duffy_rule",
+      "source_file": "newton article 1/GMRES-LU/lp3/validation_model.py",
+      "identical_executable_syntax": true,
+      "arithmetic_preserved": true
+    },
+    {
+      "packaged_file": "source/models/fourier3d.py",
+      "symbol": "errors",
+      "source_file": "newton article 1/GMRES-LU/lp3/validation_model.py",
+      "identical_executable_syntax": true,
+      "arithmetic_preserved": true
+    },
+    {
+      "packaged_file": "source/models/physical.py",
+      "symbol": "laws",
+      "source_file": "newton article 1/GMRES-LU/physique_5_2/reference_L500/src/physique/physical_parallele.py",
+      "identical_executable_syntax": false,
+      "adaptation": "Parameters are supplied as an argument and bound once; the original evaluation body is unchanged.",
+      "arithmetic_preserved": true
+    },
+    {
+      "packaged_file": "source/models/physical.py",
+      "symbol": "initial",
+      "source_file": "newton article 1/GMRES-LU/physique_5_2/reference_L500/src/physique/physical_parallele.py",
+      "identical_executable_syntax": true,
+      "arithmetic_preserved": true
+    }
+  ],
+  "unchanged_numeric_definitions": 81,
+  "all_checks_pass": true,
+  "arithmetic_preserved_definitions": 83,
+  "new_interfaces": [
+    "source/api.py: example drivers, preserving the original source-time choice and adaptive controller",
+    "source/solvers/newton.py: explicit Newton/GMRES-ILU calls, replacing worker instrumentation and monkey-patching",
+    "source/utils/reconstruction.py: relative vertical constitutive display, using the archived gz(initial)/gz(current) stretch and exact integration of linear nodal values along vertical edges"
+  ],
+  "package_source_files": {
+    "source/api.py": "c970764899a04b281f9000114fba4d1b422d841af8233cdbc602859baf8ea479",
+    "source/__init__.py": "e1d320b2cc3d39bdddd96c39bfa503d62fe8c633edf153e37ccfb90a2f3178fb",
+    "source/basisfunctions/tetrahedra.py": "a14a98be64ff97efdd1fc263da79dd31743a926f0812116ad7d7b2e54d990d18",
+    "source/basisfunctions/__init__.py": "e1d320b2cc3d39bdddd96c39bfa503d62fe8c633edf153e37ccfb90a2f3178fb",
+    "source/LocalGlobalMapping/mesh3d.py": "bab3408fa19326c6a586b41c96408f04e9c3603637fb7bfe86a064502777fbb5",
+    "source/LocalGlobalMapping/__init__.py": "e1d320b2cc3d39bdddd96c39bfa503d62fe8c633edf153e37ccfb90a2f3178fb",
+    "source/MatrixAssembly/implicit2d.py": "d2eb98990336fb9ad64c44412fb9942ecef44d22b72ce3bf0130663e1d9b861b",
+    "source/MatrixAssembly/mass3d.py": "e34939ae0c4dfa9462edc435f74cfe5bc388f7170018103553808be306030aa2",
+    "source/MatrixAssembly/parallel3d.py": "1f1503b13578fd1d86b79e93d088a1fd52bcc71015cd350b160d5fc00a21bacf",
+    "source/MatrixAssembly/physical2d.py": "19d0eb5918b781c30feca7b4cf1a8c20c18c129dec853e9acbe061fea6b82e7c",
+    "source/MatrixAssembly/semi3d.py": "ae702225019f3fe335ba0de4d64f30d692da049ca4d5d2682b0436ce2a16f3f7",
+    "source/MatrixAssembly/triangles.py": "dd5cdc546b3847e5b013432eb1aeab38214e2a08ffda0b5f52595b7e9bf4924d",
+    "source/MatrixAssembly/__init__.py": "e1d320b2cc3d39bdddd96c39bfa503d62fe8c633edf153e37ccfb90a2f3178fb",
+    "source/models/fourier3d.py": "bfb40dd55faeb510661a5d3315ba7b660896d71e61ded0713bc5ac2cce95db10",
+    "source/models/physical.py": "62054304706d9285eb3c6e2ec1e811dd19f612cff6dd6cdf225c278daa9e4470",
+    "source/models/smooth.py": "73ffa5dfdd46d57e09f3b8205cd786ba2af3a3cdfb5a8e1167079490aad1e669",
+    "source/models/validation2d.py": "1496f6cd803f017b3f0f38b0893dd2a2f3d371fd5e912045b78e5872daebed86",
+    "source/models/validation3d.py": "b3fd420d1c15081413bc0a11ca00a8e627e1f85d0896741ee7b7e9f9ab1fce54",
+    "source/models/__init__.py": "e1d320b2cc3d39bdddd96c39bfa503d62fe8c633edf153e37ccfb90a2f3178fb",
+    "source/solvers/newton.py": "e36c33f0628eb9a8823da84b7a3915ae671d1868d3f71e2b1729e74738c9e768",
+    "source/solvers/reference3d.py": "e5a1cf6bcdaa02654f3c1edb562fcd22444d10f3fd875187e05b99ada1eac74a",
+    "source/solvers/__init__.py": "e1d320b2cc3d39bdddd96c39bfa503d62fe8c633edf153e37ccfb90a2f3178fb",
+    "source/utils/reconstruction.py": "37ad7cec3ffba71431e08e352e607df78cc19dd51520560adbc0679baa9cb5b8",
+    "source/utils/__init__.py": "e1d320b2cc3d39bdddd96c39bfa503d62fe8c633edf153e37ccfb90a2f3178fb",
+    "source/utils/isosurface.py": "e21b913171dc66e206079a0499a8f28740484d356933109f7ab37ee570cf4d03"
+  },
+  "final_editorial_check": {
+    "changed_files": [
+      "source/LocalGlobalMapping/mesh3d.py",
+      "source/MatrixAssembly/implicit2d.py",
+      "source/MatrixAssembly/mass3d.py",
+      "source/MatrixAssembly/parallel3d.py",
+      "source/MatrixAssembly/semi3d.py",
+      "source/MatrixAssembly/triangles.py",
+      "source/models/smooth.py",
+      "source/models/validation3d.py"
+    ],
+    "numerical_AST_unchanged": true,
+    "scope": "Docstrings, comment wording, configuration descriptions and three short expression joins only."
+  }
+}

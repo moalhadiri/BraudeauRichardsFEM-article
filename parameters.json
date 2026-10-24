@@ -1,0 +1,41 @@
+{
+  "spatial": {
+    "meshes_2d": [
+      4,
+      8,
+      16
+    ],
+    "meshes_3d": [
+      4,
+      8
+    ],
+    "ell": 3,
+    "final_time": 0.5
+  },
+  "temporal": {
+    "mesh_2d": 16,
+    "mesh_3d": 16,
+    "ell": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "final_time": 0.5
+  },
+  "fourier": {
+    "mesh": 8,
+    "ell": 2,
+    "final_time": 0.2
+  },
+  "sphere": {
+    "mesh": 16,
+    "ell": 2,
+    "final_time": 0.1
+  },
+  "dry": {
+    "mesh_x": 20,
+    "mesh_z": 10,
+    "final_time": 1.0
+  }
+}

@@ -1,0 +1,1809 @@
+{
+  "schema_version": 1,
+  "status": "passed",
+  "generated_utc": "2026-10-24T18:07:11+00:00",
+  "calculations": 30,
+  "checks_total": 151,
+  "checks_passed": 151,
+  "source_revision": "335f48b16c91c2807919c0a17b1107f0f9515e73",
+  "parameters": {
+    "dry": {
+      "final_time": 1.0,
+      "mesh_x": 20,
+      "mesh_z": 10
+    },
+    "fourier": {
+      "ell": 2,
+      "final_time": 0.2,
+      "mesh": 8
+    },
+    "spatial": {
+      "ell": 3,
+      "final_time": 0.5,
+      "meshes_2d": [
+        4,
+        8,
+        16
+      ],
+      "meshes_3d": [
+        4,
+        8
+      ]
+    },
+    "sphere": {
+      "ell": 2,
+      "final_time": 0.1,
+      "mesh": 16
+    },
+    "temporal": {
+      "ell": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "final_time": 0.5,
+      "mesh_2d": 16,
+      "mesh_3d": 16
+    }
+  },
+  "parameters_sha256": "49828ae7a5344270dc53def2cd23301a6962b2951064804fe7757a8af3aadb23",
+  "numerical_source_sha256_lf": {
+    "test.py": "c1e5219b3b700b477009b416311d906e629e5fb6f17c6b923b2cf0ab85738cf6",
+    "parameters.json": "58253e069a9f5fc08c89e36a325cf5580651cb92c69ded450c00fc7f4183b813",
+    "source/LocalGlobalMapping/mesh3d.py": "e1c16344021b957f17fec58f10057316fed0799b9d49bfc80453764e52a3e264",
+    "source/MatrixAssembly/implicit2d.py": "c8ac92b0fba993f4db49cc77a036fdcf0439b92ab8237e50c92534d40c7d818c",
+    "source/MatrixAssembly/mass3d.py": "51f5e8d1eb70330534b2ba34ce382c59d8916ca99cb086e689ff33447715fd94",
+    "source/MatrixAssembly/parallel3d.py": "20f2dd747ecc76e3ea9497bcb5b2cf813b9908032a0271a9bdacedd9ffed639c",
+    "source/MatrixAssembly/physical2d.py": "610cb49b0b6ab85ea557e73d12692fbc014170e9d1c0ebd269de0d719ab256de",
+    "source/MatrixAssembly/semi3d.py": "38959d15125166bb5ebcc72b842904116e235cc9019841e2a0a00f885bfde5dd",
+    "source/MatrixAssembly/triangles.py": "b5d2fcd6b15cae60c8299f93090498b6c028e33461979c9816310c39faa65bb5",
+    "source/api.py": "19744170cd193d28a52a8c144937ab778e6f7be460662fa0ddd53bc25e7a4ba7",
+    "source/basisfunctions/tetrahedra.py": "52d2b153a1bd2c0093427fdf961691dc364f973ac90a1b6253bd72ab69c4c9ed",
+    "source/models/fourier3d.py": "0421cdacb67c377031864f2ede59befc1bacd3dbffc2febe56d7b5ebbbb79ad0",
+    "source/models/physical.py": "0ccfcd4380095a1f72a571d3a90d45b68029536372d81172f4147de5be16c45f",
+    "source/models/smooth.py": "6d4fa5134652ea839e76e9e15d77a09b970fdef46cc7133cd547074aee3343bb",
+    "source/models/validation2d.py": "aa7db8c48127007e8613cbc54a888d97fb8a1e6a9cfee35e50a75806dfddce4b",
+    "source/models/validation3d.py": "653875561dbf0e0fc3b0a0c25a9490f0db17ea72013cbaad2292f9e96343294c",
+    "source/solvers/newton.py": "b1277ce85a34268fab297f669b47462deea4b5be5b48da9e95b2568117fbb542",
+    "source/solvers/reference3d.py": "5491581abf170a0c6aa15da0727d5ac47d6f478b486b6efe77c70ed31d236126",
+    "source/utils/configuration.py": "73a8a5121a2f7076ec6db3f60eb6c0910f00795a32b53a366dd0027b51e5852c",
+    "source/utils/isosurface.py": "e21b913171dc66e206079a0499a8f28740484d356933109f7ab37ee570cf4d03",
+    "source/utils/reconstruction.py": "f38bfc79ab6b7e6088124b5203ac70a33269537003496d51fd7f3f0b84df6904",
+    "source/utils/verification.py": "9fe0c0dc3dce755489827a95f1d2acdb269254086371c270c6d3ad5a80d928d0"
+  },
+  "text_summary_sha256_lf": "34cd47b4840f12b6cb742d057d3dca0bf92a8080ee3872abe970b20221573231",
+  "image_sha256": "0c4630f9de0aaa043c80528e2bad2f7cf69b3e1991a8107a88bc29661b9541d8",
+  "cases": [
+    {
+      "id": "spatial_2d_implicit_h4",
+      "dimension": 2,
+      "scheme": "implicit",
+      "problem": "polynomial_validation",
+      "dataset": null,
+      "time_model": "stationary",
+      "nx": 5,
+      "nz": null,
+      "h": 0.25,
+      "h_unit": "unit domain",
+      "dt": 0.025,
+      "ell": 3,
+      "dt_min": 0.025,
+      "dt_max": 0.025,
+      "t_final": 0.5,
+      "workers": 1,
+      "relaxation": 1.0,
+      "error_L2": 0.006848617724514821,
+      "error_H1": 0.06633373564705018,
+      "newton_iterations_mean": 2.05,
+      "newton_iterations_max": 4,
+      "maximum_linear_relative_residual": 6.558658436642446e-16,
+      "pressure_min": -0.018834583967866626,
+      "pressure_max": 0.022003351761255553,
+      "elapsed_seconds": 0.27201709999999935,
+      "newton_tolerance": 1e-08,
+      "linear_solver": "GMRES-ILU"
+    },
+    {
+      "id": "spatial_2d_implicit_h8",
+      "dimension": 2,
+      "scheme": "implicit",
+      "problem": "polynomial_validation",
+      "dataset": null,
+      "time_model": "stationary",
+      "nx": 9,
+      "nz": null,
+      "h": 0.125,
+      "h_unit": "unit domain",
+      "dt": 0.025,
+      "ell": 3,
+      "dt_min": 0.025,
+      "dt_max": 0.025,
+      "t_final": 0.5,
+      "workers": 1,
+      "relaxation": 1.0,
+      "error_L2": 0.002181261558913063,
+      "error_H1": 0.03495192658264192,
+      "newton_iterations_mean": 1.85,
+      "newton_iterations_max": 3,
+      "maximum_linear_relative_residual": 1.1201207462498781e-11,
+      "pressure_min": -0.024975619161600942,
+      "pressure_max": 0.026345796188831712,
+      "elapsed_seconds": 0.26657844700000055,
+      "newton_tolerance": 1e-08,
+      "linear_solver": "GMRES-ILU"
+    },
+    {
+      "id": "spatial_2d_implicit_h16",
+      "dimension": 2,
+      "scheme": "implicit",
+      "problem": "polynomial_validation",
+      "dataset": null,
+      "time_model": "stationary",
+      "nx": 17,
+      "nz": null,
+      "h": 0.0625,
+      "h_unit": "unit domain",
+      "dt": 0.025,
+      "ell": 3,
+      "dt_min": 0.025,
+      "dt_max": 0.025,
+      "t_final": 0.5,
+      "workers": 1,
+      "relaxation": 1.0,
+      "error_L2": 0.0005823523197041522,
+      "error_H1": 0.017633946571186127,
+      "newton_iterations_mean": 1.75,
+      "newton_iterations_max": 3,
+      "maximum_linear_relative_residual": 1.2789399850430172e-11,
+      "pressure_min": -0.027538892303486308,
+      "pressure_max": 0.02764694403813852,
+      "elapsed_seconds": 0.30771246399999796,
+      "newton_tolerance": 1e-08,
+      "linear_solver": "GMRES-ILU"
+    },
+    {
+      "id": "spatial_2d_semi_implicit_h4",
+      "dimension": 2,
+      "scheme": "semi_implicit",
+      "problem": "polynomial_validation",
+      "dataset": null,
+      "time_model": "stationary",
+      "nx": 5,
+      "nz": null,
+      "h": 0.25,
+      "h_unit": "unit domain",
+      "dt": 0.025,
+      "ell": 3,
+      "dt_min": 0.025,
+      "dt_max": 0.025,
+      "t_final": 0.5,
+      "workers": 1,
+      "relaxation": 1.0,
+      "error_L2": 0.006848617724485719,
+      "error_H1": 0.06633373564700037,
+      "newton_iterations_mean": 1.95,
+      "newton_iterations_max": 3,
+      "maximum_linear_relative_residual": 9.44765350524739e-16,
+      "pressure_min": -0.018834583967978286,
+      "pressure_max": 0.02200335176122438,
+      "elapsed_seconds": 0.26649313700000477,
+      "newton_tolerance": 1e-08,
+      "linear_solver": "GMRES-ILU"
+    },
+    {
+      "id": "spatial_2d_semi_implicit_h8",
+      "dimension": 2,
+      "scheme": "semi_implicit",
+      "problem": "polynomial_validation",
+      "dataset": null,
+      "time_model": "stationary",
+      "nx": 9,
+      "nz": null,
+      "h": 0.125,
+      "h_unit": "unit domain",
+      "dt": 0.025,
+      "ell": 3,
+      "dt_min": 0.025,
+      "dt_max": 0.025,
+      "t_final": 0.5,
+      "workers": 1,
+      "relaxation": 1.0,
+      "error_L2": 0.0021812615588939076,
+      "error_H1": 0.03495192658262357,
+      "newton_iterations_mean": 1.85,
+      "newton_iterations_max": 3,
+      "maximum_linear_relative_residual": 1.0465691011030915e-11,
+      "pressure_min": -0.024975619161672107,
+      "pressure_max": 0.02634579618880813,
+      "elapsed_seconds": 0.26140799699999917,
+      "newton_tolerance": 1e-08,
+      "linear_solver": "GMRES-ILU"
+    },
+    {
+      "id": "spatial_2d_semi_implicit_h16",
+      "dimension": 2,
+      "scheme": "semi_implicit",
+      "problem": "polynomial_validation",
+      "dataset": null,
+      "time_model": "stationary",
+      "nx": 17,
+      "nz": null,
+      "h": 0.0625,
+      "h_unit": "unit domain",
+      "dt": 0.025,
+      "ell": 3,
+      "dt_min": 0.025,
+      "dt_max": 0.025,
+      "t_final": 0.5,
+      "workers": 1,
+      "relaxation": 1.0,
+      "error_L2": 0.0005823523196976264,
+      "error_H1": 0.0176339465711829,
+      "newton_iterations_mean": 1.75,
+      "newton_iterations_max": 3,
+      "maximum_linear_relative_residual": 1.0308072478779247e-11,
+      "pressure_min": -0.027538892303504193,
+      "pressure_max": 0.02764694403813347,
+      "elapsed_seconds": 0.29235685300000114,
+      "newton_tolerance": 1e-08,
+      "linear_solver": "GMRES-ILU"
+    },
+    {
+      "id": "spatial_3d_implicit_h4",
+      "dimension": 3,
+      "scheme": "implicit",
+      "problem": "polynomial_validation",
+      "dataset": null,
+      "time_model": "stationary",
+      "nx": 5,
+      "nz": null,
+      "h": 0.25,
+      "h_unit": "unit domain",
+      "dt": 0.025,
+      "ell": 3,
+      "dt_min": 0.025,
+      "dt_max": 0.025,
+      "t_final": 0.5,
+      "workers": 1,
+      "relaxation": 1.0,
+      "error_L2": 0.0007993216984396111,
+      "error_H1": 0.007982101195563274,
+      "newton_iterations_mean": 1.8,
+      "newton_iterations_max": 3,
+      "maximum_linear_relative_residual": 9.702748636081738e-11,
+      "pressure_min": -0.0022061254018520904,
+      "pressure_max": 0.0025311725881262755,
+      "elapsed_seconds": 0.35332044799999807,
+      "newton_tolerance": 1e-08,
+      "linear_solver": "GMRES-ILU"
+    },
+    {
+      "id": "spatial_3d_implicit_h8",
+      "dimension": 3,
+      "scheme": "implicit",
+      "problem": "polynomial_validation",
+      "dataset": null,
+      "time_model": "stationary",
+      "nx": 9,
+      "nz": null,
+      "h": 0.125,
+      "h_unit": "unit domain",
+      "dt": 0.025,
+      "ell": 3,
+      "dt_min": 0.025,
+      "dt_max": 0.025,
+      "t_final": 0.5,
+      "workers": 1,
+      "relaxation": 1.0,
+      "error_L2": 0.000284971234865502,
+      "error_H1": 0.004373427112954403,
+      "newton_iterations_mean": 1.7,
+      "newton_iterations_max": 3,
+      "maximum_linear_relative_residual": 2.675168072615274e-11,
+      "pressure_min": -0.003498299953940235,
+      "pressure_max": 0.0036738865037176487,
+      "elapsed_seconds": 0.6821099359999963,
+      "newton_tolerance": 1e-08,
+      "linear_solver": "GMRES-ILU"
+    },
+    {
+      "id": "spatial_3d_semi_implicit_h4",
+      "dimension": 3,
+      "scheme": "semi_implicit",
+      "problem": "polynomial_validation",
+      "dataset": null,
+      "time_model": "stationary",
+      "nx": 5,
+      "nz": null,
+      "h": 0.25,
+      "h_unit": "unit domain",
+      "dt": 0.025,
+      "ell": 3,
+      "dt_min": 0.025,
+      "dt_max": 0.025,
+      "t_final": 0.5,
+      "workers": 1,
+      "relaxation": 1.0,
+      "error_L2": 0.0007993216984396108,
+      "error_H1": 0.007982101195563272,
+      "newton_iterations_mean": 1.7,
+      "newton_iterations_max": 3,
+      "maximum_linear_relative_residual": 9.891749615928858e-11,
+      "pressure_min": -0.002206125401852092,
+      "pressure_max": 0.0025311725881262763,
+      "elapsed_seconds": 0.3061819500000027,
+      "newton_tolerance": 1e-08,
+      "linear_solver": "GMRES-ILU"
+    },
+    {
+      "id": "spatial_3d_semi_implicit_h8",
+      "dimension": 3,
+      "scheme": "semi_implicit",
+      "problem": "polynomial_validation",
+      "dataset": null,
+      "time_model": "stationary",
+      "nx": 9,
+      "nz": null,
+      "h": 0.125,
+      "h_unit": "unit domain",
+      "dt": 0.025,
+      "ell": 3,
+      "dt_min": 0.025,
+      "dt_max": 0.025,
+      "t_final": 0.5,
+      "workers": 1,
+      "relaxation": 1.0,
+      "error_L2": 0.0002849712348655018,
+      "error_H1": 0.004373427112954402,
+      "newton_iterations_mean": 1.65,
+      "newton_iterations_max": 3,
+      "maximum_linear_relative_residual": 2.6713164075770654e-11,
+      "pressure_min": -0.003498299953940236,
+      "pressure_max": 0.0036738865037176482,
+      "elapsed_seconds": 0.6312096380000014,
+      "newton_tolerance": 1e-08,
+      "linear_solver": "GMRES-ILU"
+    },
+    {
+      "id": "temporal_2d_implicit_ell1_tau0.1",
+      "dimension": 2,
+      "scheme": "implicit",
+      "problem": "polynomial_validation",
+      "dataset": null,
+      "time_model": "cubic",
+      "nx": 17,
+      "nz": null,
+      "h": 0.0625,
+      "h_unit": "unit domain",
+      "dt": 0.1,
+      "ell": 1,
+      "dt_min": 0.1,
+      "dt_max": 0.1,
+      "t_final": 0.5,
+      "workers": 1,
+      "relaxation": 1.0,
+      "error_L2": 0.0005166864656137228,
+      "error_H1": 0.015563560625086542,
+      "newton_iterations_mean": 3.0,
+      "newton_iterations_max": 3,
+      "maximum_linear_relative_residual": 1.3744492714441557e-11,
+      "pressure_min": -0.02429292228634584,
+      "pressure_max": 0.024391346034504744,
+      "elapsed_seconds": 0.1264542170000027,
+      "newton_tolerance": 1e-08,
+      "linear_solver": "GMRES-ILU"
+    },
+    {
+      "id": "temporal_2d_implicit_ell2_tau0.05",
+      "dimension": 2,
+      "scheme": "implicit",
+      "problem": "polynomial_validation",
+      "dataset": null,
+      "time_model": "cubic",
+      "nx": 17,
+      "nz": null,
+      "h": 0.0625,
+      "h_unit": "unit domain",
+      "dt": 0.05,
+      "ell": 2,
+      "dt_min": 0.05,
+      "dt_max": 0.05,
+      "t_final": 0.5,
+      "workers": 1,
+      "relaxation": 1.0,
+      "error_L2": 0.0005145246798204749,
+      "error_H1": 0.015562277529266364,
+      "newton_iterations_mean": 3.0,
+      "newton_iterations_max": 3,
+      "maximum_linear_relative_residual": 1.1371093121254207e-11,
+      "pressure_min": -0.024299078610107723,
+      "pressure_max": 0.02439603302530645,
+      "elapsed_seconds": 0.24173067299999929,
+      "newton_tolerance": 1e-08,
+      "linear_solver": "GMRES-ILU"
+    },
+    {
+      "id": "temporal_2d_implicit_ell3_tau0.025",
+      "dimension": 2,
+      "scheme": "implicit",
+      "problem": "polynomial_validation",
+      "dataset": null,
+      "time_model": "cubic",
+      "nx": 17,
+      "nz": null,
+      "h": 0.0625,
+      "h_unit": "unit domain",
+      "dt": 0.025,
+      "ell": 3,
+      "dt_min": 0.025,
+      "dt_max": 0.025,
+      "t_final": 0.5,
+      "workers": 1,
+      "relaxation": 1.0,
+      "error_L2": 0.0005134287623164251,
+      "error_H1": 0.015561636112489279,
+      "newton_iterations_mean": 3.0,
+      "newton_iterations_max": 3,
+      "maximum_linear_relative_residual": 7.062051583084095e-12,
+      "pressure_min": -0.02430220623654082,
+      "pressure_max": 0.024398407913111236,
+      "elapsed_seconds": 0.4714484459999966,
+      "newton_tolerance": 1e-08,
+      "linear_solver": "GMRES-ILU"
+    },
+    {
+      "id": "temporal_2d_implicit_ell4_tau0.0125",
+      "dimension": 2,
+      "scheme": "implicit",
+      "problem": "polynomial_validation",
+      "dataset": null,
+      "time_model": "cubic",
+      "nx": 17,
+      "nz": null,
+      "h": 0.0625,
+      "h_unit": "unit domain",
+      "dt": 0.0125,
+      "ell": 4,
+      "dt_min": 0.0125,
+      "dt_max": 0.0125,
+      "t_final": 0.5,
+      "workers": 1,
+      "relaxation": 1.0,
+      "error_L2": 0.0005128790453905942,
+      "error_H1": 0.01556131666635996,
+      "newton_iterations_mean": 2.9,
+      "newton_iterations_max": 3,
+      "maximum_linear_relative_residual": 4.244924332305338e-12,
+      "pressure_min": -0.02430377680347638,
+      "pressure_max": 0.024399599188282526,
+      "elapsed_seconds": 0.9365480479999988,
+      "newton_tolerance": 1e-08,
+      "linear_solver": "GMRES-ILU"
+    },
+    {
+      "id": "temporal_2d_semi_implicit_ell1_tau0.1",
+      "dimension": 2,
+      "scheme": "semi_implicit",
+      "problem": "polynomial_validation",
+      "dataset": null,
+      "time_model": "cubic",
+      "nx": 17,
+      "nz": null,
+      "h": 0.0625,
+      "h_unit": "unit domain",
+      "dt": 0.1,
+      "ell": 1,
+      "dt_min": 0.1,
+      "dt_max": 0.1,
+      "t_final": 0.5,
+      "workers": 1,
+      "relaxation": 1.0,
+      "error_L2": 0.0004363868842313201,
+      "error_H1": 0.016139824591235998,
+      "newton_iterations_mean": 2.8,
+      "newton_iterations_max": 3,
+      "maximum_linear_relative_residual": 1.4309335635797265e-11,
+      "pressure_min": -0.02589525112665855,
+      "pressure_max": 0.025850486394112925,
+      "elapsed_seconds": 0.11953709199999452,
+      "newton_tolerance": 1e-08,
+      "linear_solver": "GMRES-ILU"
+    },
+    {
+      "id": "temporal_2d_semi_implicit_ell2_tau0.05",
+      "dimension": 2,
+      "scheme": "semi_implicit",
+      "problem": "polynomial_validation",
+      "dataset": null,
+      "time_model": "cubic",
+      "nx": 17,
+      "nz": null,
+      "h": 0.0625,
+      "h_unit": "unit domain",
+      "dt": 0.05,
+      "ell": 2,
+      "dt_min": 0.05,
+      "dt_max": 0.05,
+      "t_final": 0.5,
+      "workers": 1,
+      "relaxation": 1.0,
+      "error_L2": 0.0003066759751667124,
+      "error_H1": 0.0156469267914374,
+      "newton_iterations_mean": 2.7,
+      "newton_iterations_max": 3,
+      "maximum_linear_relative_residual": 1.2568814939771801e-11,
+      "pressure_min": -0.025187919924822073,
+      "pressure_max": 0.02518479164584832,
+      "elapsed_seconds": 0.21687804999999827,
+      "newton_tolerance": 1e-08,
+      "linear_solver": "GMRES-ILU"
+    },
+    {
+      "id": "temporal_2d_semi_implicit_ell3_tau0.025",
+      "dimension": 2,
+      "scheme": "semi_implicit",
+      "problem": "polynomial_validation",
+      "dataset": null,
+      "time_model": "cubic",
+      "nx": 17,
+      "nz": null,
+      "h": 0.0625,
+      "h_unit": "unit domain",
+      "dt": 0.025,
+      "ell": 3,
+      "dt_min": 0.025,
+      "dt_max": 0.025,
+      "t_final": 0.5,
+      "workers": 1,
+      "relaxation": 1.0,
+      "error_L2": 0.00036806865825394423,
+      "error_H1": 0.01553412264377578,
+      "newton_iterations_mean": 2.6,
+      "newton_iterations_max": 3,
+      "maximum_linear_relative_residual": 1.0827222050726359e-11,
+      "pressure_min": -0.02476895247139774,
+      "pressure_max": 0.024807782687883178,
+      "elapsed_seconds": 0.41541645899999935,
+      "newton_tolerance": 1e-08,
+      "linear_solver": "GMRES-ILU"
+    },
+    {
+      "id": "temporal_2d_semi_implicit_ell4_tau0.0125",
+      "dimension": 2,
+      "scheme": "semi_implicit",
+      "problem": "polynomial_validation",
+      "dataset": null,
+      "time_model": "cubic",
+      "nx": 17,
+      "nz": null,
+      "h": 0.0625,
+      "h_unit": "unit domain",
+      "dt": 0.0125,
+      "ell": 4,
+      "dt_min": 0.0125,
+      "dt_max": 0.0125,
+      "t_final": 0.5,
+      "workers": 1,
+      "relaxation": 1.0,
+      "error_L2": 0.00043237566641247195,
+      "error_H1": 0.015527597193092442,
+      "newton_iterations_mean": 2.325,
+      "newton_iterations_max": 3,
+      "maximum_linear_relative_residual": 9.248796630724705e-12,
+      "pressure_min": -0.024542738697600975,
+      "pressure_max": 0.024608061065518397,
+      "elapsed_seconds": 0.7459986149999978,
+      "newton_tolerance": 1e-08,
+      "linear_solver": "GMRES-ILU"
+    },
+    {
+      "id": "temporal_3d_implicit_ell1_tau0.1",
+      "dimension": 3,
+      "scheme": "implicit",
+      "problem": "polynomial_validation",
+      "dataset": null,
+      "time_model": "exponential",
+      "nx": 17,
+      "nz": null,
+      "h": 0.0625,
+      "h_unit": "unit domain",
+      "dt": 0.1,
+      "ell": 1,
+      "dt_min": 0.1,
+      "dt_max": 0.1,
+      "t_final": 0.5,
+      "workers": 1,
+      "relaxation": 1.0,
+      "error_L2": 4.776427024993147e-05,
+      "error_H1": 0.0013473608862745827,
+      "newton_iterations_mean": 3.0,
+      "newton_iterations_max": 3,
+      "maximum_linear_relative_residual": 8.199103640968553e-11,
+      "pressure_min": -0.0024352744854180407,
+      "pressure_max": 0.002437791792462049,
+      "elapsed_seconds": 2.329192116999998,
+      "newton_tolerance": 1e-08,
+      "linear_solver": "GMRES-ILU"
+    },
+    {
+      "id": "temporal_3d_implicit_ell2_tau0.05",
+      "dimension": 3,
+      "scheme": "implicit",
+      "problem": "polynomial_validation",
+      "dataset": null,
+      "time_model": "exponential",
+      "nx": 17,
+      "nz": null,
+      "h": 0.0625,
+      "h_unit": "unit domain",
+      "dt": 0.05,
+      "ell": 2,
+      "dt_min": 0.05,
+      "dt_max": 0.05,
+      "t_final": 0.5,
+      "workers": 1,
+      "relaxation": 1.0,
+      "error_L2": 4.7812589117734334e-05,
+      "error_H1": 0.0013474035310074783,
+      "newton_iterations_mean": 3.0,
+      "newton_iterations_max": 3,
+      "maximum_linear_relative_residual": 9.571865929550118e-11,
+      "pressure_min": -0.0024350871412695814,
+      "pressure_max": 0.0024376054432519658,
+      "elapsed_seconds": 3.879606307000003,
+      "newton_tolerance": 1e-08,
+      "linear_solver": "GMRES-ILU"
+    },
+    {
+      "id": "temporal_3d_implicit_ell3_tau0.025",
+      "dimension": 3,
+      "scheme": "implicit",
+      "problem": "polynomial_validation",
+      "dataset": null,
+      "time_model": "exponential",
+      "nx": 17,
+      "nz": null,
+      "h": 0.0625,
+      "h_unit": "unit domain",
+      "dt": 0.025,
+      "ell": 3,
+      "dt_min": 0.025,
+      "dt_max": 0.025,
+      "t_final": 0.5,
+      "workers": 1,
+      "relaxation": 1.0,
+      "error_L2": 4.7836156039316465e-05,
+      "error_H1": 0.0013474243936094912,
+      "newton_iterations_mean": 3.0,
+      "newton_iterations_max": 3,
+      "maximum_linear_relative_residual": 5.646361843287052e-11,
+      "pressure_min": -0.002434995820323528,
+      "pressure_max": 0.0024375145835025744,
+      "elapsed_seconds": 6.728966140000004,
+      "newton_tolerance": 1e-08,
+      "linear_solver": "GMRES-ILU"
+    },
+    {
+      "id": "temporal_3d_implicit_ell4_tau0.0125",
+      "dimension": 3,
+      "scheme": "implicit",
+      "problem": "polynomial_validation",
+      "dataset": null,
+      "time_model": "exponential",
+      "nx": 17,
+      "nz": null,
+      "h": 0.0625,
+      "h_unit": "unit domain",
+      "dt": 0.0125,
+      "ell": 4,
+      "dt_min": 0.0125,
+      "dt_max": 0.0125,
+      "t_final": 0.5,
+      "workers": 1,
+      "relaxation": 1.0,
+      "error_L2": 4.784779561072764e-05,
+      "error_H1": 0.0013474347125320015,
+      "newton_iterations_mean": 3.0,
+      "newton_iterations_max": 3,
+      "maximum_linear_relative_residual": 2.1881728573284815e-11,
+      "pressure_min": -0.002434950730793664,
+      "pressure_max": 0.0024374697228740348,
+      "elapsed_seconds": 13.302147547999994,
+      "newton_tolerance": 1e-08,
+      "linear_solver": "GMRES-ILU"
+    },
+    {
+      "id": "temporal_3d_semi_implicit_ell1_tau0.1",
+      "dimension": 3,
+      "scheme": "semi_implicit",
+      "problem": "polynomial_validation",
+      "dataset": null,
+      "time_model": "exponential",
+      "nx": 17,
+      "nz": null,
+      "h": 0.0625,
+      "h_unit": "unit domain",
+      "dt": 0.1,
+      "ell": 1,
+      "dt_min": 0.1,
+      "dt_max": 0.1,
+      "t_final": 0.5,
+      "workers": 1,
+      "relaxation": 1.0,
+      "error_L2": 4.934133485977757e-05,
+      "error_H1": 0.001451780519516554,
+      "newton_iterations_mean": 3.0,
+      "newton_iterations_max": 3,
+      "maximum_linear_relative_residual": 9.184295263351974e-11,
+      "pressure_min": -0.0026932472580940836,
+      "pressure_max": 0.0026923267570429683,
+      "elapsed_seconds": 2.1830714839999956,
+      "newton_tolerance": 1e-08,
+      "linear_solver": "GMRES-ILU"
+    },
+    {
+      "id": "temporal_3d_semi_implicit_ell2_tau0.05",
+      "dimension": 3,
+      "scheme": "semi_implicit",
+      "problem": "polynomial_validation",
+      "dataset": null,
+      "time_model": "exponential",
+      "nx": 17,
+      "nz": null,
+      "h": 0.0625,
+      "h_unit": "unit domain",
+      "dt": 0.05,
+      "ell": 2,
+      "dt_min": 0.05,
+      "dt_max": 0.05,
+      "t_final": 0.5,
+      "workers": 1,
+      "relaxation": 1.0,
+      "error_L2": 2.7733532747026436e-05,
+      "error_H1": 0.0013573493130357977,
+      "newton_iterations_mean": 3.0,
+      "newton_iterations_max": 3,
+      "maximum_linear_relative_residual": 6.881267533891851e-11,
+      "pressure_min": -0.002560751796186692,
+      "pressure_max": 0.0025617690855524525,
+      "elapsed_seconds": 3.7261420339999916,
+      "newton_tolerance": 1e-08,
+      "linear_solver": "GMRES-ILU"
+    },
+    {
+      "id": "temporal_3d_semi_implicit_ell3_tau0.025",
+      "dimension": 3,
+      "scheme": "semi_implicit",
+      "problem": "polynomial_validation",
+      "dataset": null,
+      "time_model": "exponential",
+      "nx": 17,
+      "nz": null,
+      "h": 0.0625,
+      "h_unit": "unit domain",
+      "dt": 0.025,
+      "ell": 3,
+      "dt_min": 0.025,
+      "dt_max": 0.025,
+      "t_final": 0.5,
+      "workers": 1,
+      "relaxation": 1.0,
+      "error_L2": 3.407311568177647e-05,
+      "error_H1": 0.0013421463592632962,
+      "newton_iterations_mean": 3.0,
+      "newton_iterations_max": 3,
+      "maximum_linear_relative_residual": 4.571319109087742e-11,
+      "pressure_min": -0.0024970203407752335,
+      "pressure_max": 0.0024988379920422243,
+      "elapsed_seconds": 7.000598659000005,
+      "newton_tolerance": 1e-08,
+      "linear_solver": "GMRES-ILU"
+    },
+    {
+      "id": "temporal_3d_semi_implicit_ell4_tau0.0125",
+      "dimension": 3,
+      "scheme": "semi_implicit",
+      "problem": "polynomial_validation",
+      "dataset": null,
+      "time_model": "exponential",
+      "nx": 17,
+      "nz": null,
+      "h": 0.0625,
+      "h_unit": "unit domain",
+      "dt": 0.0125,
+      "ell": 4,
+      "dt_min": 0.0125,
+      "dt_max": 0.0125,
+      "t_final": 0.5,
+      "workers": 1,
+      "relaxation": 1.0,
+      "error_L2": 4.046026403343547e-05,
+      "error_H1": 0.00134232182425947,
+      "newton_iterations_mean": 2.05,
+      "newton_iterations_max": 3,
+      "maximum_linear_relative_residual": 2.164531901911745e-11,
+      "pressure_min": -0.0024657637887362106,
+      "pressure_max": 0.0024679439845840933,
+      "elapsed_seconds": 9.28836723900001,
+      "newton_tolerance": 1e-08,
+      "linear_solver": "GMRES-ILU"
+    },
+    {
+      "id": "fourier_3d_preview",
+      "dimension": 3,
+      "scheme": "implicit",
+      "problem": "nonlinear_fourier_validation",
+      "dataset": null,
+      "time_model": "fourier_exponential",
+      "nx": 9,
+      "nz": null,
+      "h": 0.125,
+      "h_unit": "unit domain",
+      "dt": 0.05,
+      "ell": 2,
+      "dt_min": 0.05,
+      "dt_max": 0.05,
+      "t_final": 0.2,
+      "workers": 1,
+      "relaxation": 1.0,
+      "error_L2": 0.023794765316229056,
+      "error_H1": 0.3393909892368979,
+      "newton_iterations_mean": 3.75,
+      "newton_iterations_max": 4,
+      "maximum_linear_relative_residual": 3.423641785730173e-12,
+      "pressure_min": -0.10852161285469623,
+      "pressure_max": 0.10912991103550221,
+      "elapsed_seconds": 0.35905685599999515,
+      "newton_tolerance": 1e-08,
+      "linear_solver": "GMRES-ILU"
+    },
+    {
+      "id": "sphere_braudeau",
+      "dimension": 3,
+      "scheme": "implicit",
+      "problem": "wet_slotted_sphere",
+      "dataset": "Braudeau",
+      "time_model": null,
+      "nx": 17,
+      "nz": null,
+      "h": 0.0625,
+      "h_unit": "h/L",
+      "dt": 0.05,
+      "ell": 2,
+      "dt_min": 0.05,
+      "dt_max": 0.05,
+      "t_final": 0.1,
+      "workers": 1,
+      "relaxation": 1.0,
+      "error_L2": null,
+      "error_H1": null,
+      "newton_iterations_mean": 3.0,
+      "newton_iterations_max": 3,
+      "maximum_linear_relative_residual": 4.570233736876916e-12,
+      "pressure_min": -5.0,
+      "pressure_max": -1.238097133756533,
+      "elapsed_seconds": 0.6953162140000018,
+      "newton_tolerance": 1e-08,
+      "linear_solver": "GMRES-ILU"
+    },
+    {
+      "id": "sphere_garnier",
+      "dimension": 3,
+      "scheme": "implicit",
+      "problem": "wet_slotted_sphere",
+      "dataset": "Garnier",
+      "time_model": null,
+      "nx": 17,
+      "nz": null,
+      "h": 0.0625,
+      "h_unit": "h/L",
+      "dt": 0.05,
+      "ell": 2,
+      "dt_min": 0.05,
+      "dt_max": 0.05,
+      "t_final": 0.1,
+      "workers": 1,
+      "relaxation": 1.0,
+      "error_L2": null,
+      "error_H1": null,
+      "newton_iterations_mean": 3.0,
+      "newton_iterations_max": 3,
+      "maximum_linear_relative_residual": 4.342707603502561e-12,
+      "pressure_min": -5.0,
+      "pressure_max": -1.2387971513589542,
+      "elapsed_seconds": 0.6928906850000089,
+      "newton_tolerance": 1e-08,
+      "linear_solver": "GMRES-ILU"
+    },
+    {
+      "id": "dry_2d_preview",
+      "dimension": 2,
+      "scheme": "implicit",
+      "problem": "dry_infiltration",
+      "dataset": "Braudeau",
+      "time_model": null,
+      "nx": 21,
+      "nz": 11,
+      "h": 0.1,
+      "h_unit": "cm",
+      "dt": null,
+      "ell": null,
+      "dt_min": 0.0001874999999999993,
+      "dt_max": 0.14261509584200674,
+      "t_final": 1.0,
+      "workers": 1,
+      "relaxation": 1.0,
+      "error_L2": null,
+      "error_H1": null,
+      "newton_iterations_mean": 1.0,
+      "newton_iterations_max": 1,
+      "maximum_linear_relative_residual": 2.4503767242529325e-16,
+      "pressure_min": -400.0000010263781,
+      "pressure_max": -379.85,
+      "elapsed_seconds": 0.5573878360000037,
+      "newton_tolerance": 1e-08,
+      "linear_solver": "sparse direct"
+    }
+  ],
+  "checks": [
+    {
+      "name": "2D implicit Jacobian",
+      "status": "passed",
+      "value": 6.240704254835304e-10,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "2D implicit source terms active",
+      "status": "passed"
+    },
+    {
+      "name": "2D implicit one/two assembly workers",
+      "status": "passed",
+      "value": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "2D semi_implicit Jacobian",
+      "status": "passed",
+      "value": 2.628600616362904e-11,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "2D semi_implicit source terms active",
+      "status": "passed"
+    },
+    {
+      "name": "2D semi_implicit one/two assembly workers",
+      "status": "passed",
+      "value": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "3D implicit Jacobian",
+      "status": "passed",
+      "value": 1.6637858040910785e-10,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "3D implicit source terms active",
+      "status": "passed"
+    },
+    {
+      "name": "3D implicit one/two assembly workers",
+      "status": "passed",
+      "value": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "3D semi_implicit Jacobian",
+      "status": "passed",
+      "value": 5.0103354869005324e-12,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "3D semi_implicit source terms active",
+      "status": "passed"
+    },
+    {
+      "name": "3D semi_implicit one/two assembly workers",
+      "status": "passed",
+      "value": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "spatial_2d_implicit_h4 boundary",
+      "status": "passed",
+      "value": 0.0,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "spatial_2d_implicit_h4 finite field",
+      "status": "passed"
+    },
+    {
+      "name": "spatial_2d_implicit_h4 Newton stopping",
+      "status": "passed",
+      "value": 6.716266917092338e-09,
+      "tolerance": 1e-08
+    },
+    {
+      "name": "spatial_2d_implicit_h4 true GMRES residual",
+      "status": "passed",
+      "value": 6.558658436642446e-16,
+      "tolerance": 1.05e-10
+    },
+    {
+      "name": "spatial_2d_implicit_h4 published L2",
+      "status": "passed",
+      "value": 0.006848617724514821,
+      "reference": 0.00685,
+      "tolerance": 5.050000000000001e-06
+    },
+    {
+      "name": "spatial_2d_implicit_h4 published H1",
+      "status": "passed",
+      "value": 0.06633373564705018,
+      "reference": 0.0663,
+      "tolerance": 5.05e-05
+    },
+    {
+      "name": "spatial_2d_implicit_h8 boundary",
+      "status": "passed",
+      "value": 0.0,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "spatial_2d_implicit_h8 finite field",
+      "status": "passed"
+    },
+    {
+      "name": "spatial_2d_implicit_h8 Newton stopping",
+      "status": "passed",
+      "value": 8.351229067293343e-09,
+      "tolerance": 1e-08
+    },
+    {
+      "name": "spatial_2d_implicit_h8 true GMRES residual",
+      "status": "passed",
+      "value": 1.1201207462498781e-11,
+      "tolerance": 1.05e-10
+    },
+    {
+      "name": "spatial_2d_implicit_h8 published L2",
+      "status": "passed",
+      "value": 0.002181261558913063,
+      "reference": 0.00218,
+      "tolerance": 5.050000000000001e-06
+    },
+    {
+      "name": "spatial_2d_implicit_h8 published H1",
+      "status": "passed",
+      "value": 0.03495192658264192,
+      "reference": 0.035,
+      "tolerance": 5.05e-05
+    },
+    {
+      "name": "spatial_2d_implicit_h16 boundary",
+      "status": "passed",
+      "value": 0.0,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "spatial_2d_implicit_h16 finite field",
+      "status": "passed"
+    },
+    {
+      "name": "spatial_2d_implicit_h16 Newton stopping",
+      "status": "passed",
+      "value": 6.0123177063438e-09,
+      "tolerance": 1e-08
+    },
+    {
+      "name": "spatial_2d_implicit_h16 true GMRES residual",
+      "status": "passed",
+      "value": 1.2789399850430172e-11,
+      "tolerance": 1.05e-10
+    },
+    {
+      "name": "spatial_2d_implicit_h16 published L2",
+      "status": "passed",
+      "value": 0.0005823523197041522,
+      "reference": 0.000582,
+      "tolerance": 5.049999999999999e-07
+    },
+    {
+      "name": "spatial_2d_implicit_h16 published H1",
+      "status": "passed",
+      "value": 0.017633946571186127,
+      "reference": 0.0176,
+      "tolerance": 5.05e-05
+    },
+    {
+      "name": "spatial_2d_semi_implicit_h4 boundary",
+      "status": "passed",
+      "value": 0.0,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "spatial_2d_semi_implicit_h4 finite field",
+      "status": "passed"
+    },
+    {
+      "name": "spatial_2d_semi_implicit_h4 Newton stopping",
+      "status": "passed",
+      "value": 4.806150420926033e-09,
+      "tolerance": 1e-08
+    },
+    {
+      "name": "spatial_2d_semi_implicit_h4 true GMRES residual",
+      "status": "passed",
+      "value": 9.44765350524739e-16,
+      "tolerance": 1.05e-10
+    },
+    {
+      "name": "spatial_2d_semi_implicit_h4 published L2",
+      "status": "passed",
+      "value": 0.006848617724485719,
+      "reference": 0.00685,
+      "tolerance": 5.050000000000001e-06
+    },
+    {
+      "name": "spatial_2d_semi_implicit_h4 published H1",
+      "status": "passed",
+      "value": 0.06633373564700037,
+      "reference": 0.0663,
+      "tolerance": 5.05e-05
+    },
+    {
+      "name": "spatial_2d_semi_implicit_h8 boundary",
+      "status": "passed",
+      "value": 0.0,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "spatial_2d_semi_implicit_h8 finite field",
+      "status": "passed"
+    },
+    {
+      "name": "spatial_2d_semi_implicit_h8 Newton stopping",
+      "status": "passed",
+      "value": 4.172193413992516e-09,
+      "tolerance": 1e-08
+    },
+    {
+      "name": "spatial_2d_semi_implicit_h8 true GMRES residual",
+      "status": "passed",
+      "value": 1.0465691011030915e-11,
+      "tolerance": 1.05e-10
+    },
+    {
+      "name": "spatial_2d_semi_implicit_h8 published L2",
+      "status": "passed",
+      "value": 0.0021812615588939076,
+      "reference": 0.00218,
+      "tolerance": 5.050000000000001e-06
+    },
+    {
+      "name": "spatial_2d_semi_implicit_h8 published H1",
+      "status": "passed",
+      "value": 0.03495192658262357,
+      "reference": 0.035,
+      "tolerance": 5.05e-05
+    },
+    {
+      "name": "spatial_2d_semi_implicit_h16 boundary",
+      "status": "passed",
+      "value": 0.0,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "spatial_2d_semi_implicit_h16 finite field",
+      "status": "passed"
+    },
+    {
+      "name": "spatial_2d_semi_implicit_h16 Newton stopping",
+      "status": "passed",
+      "value": 3.5778553352643122e-09,
+      "tolerance": 1e-08
+    },
+    {
+      "name": "spatial_2d_semi_implicit_h16 true GMRES residual",
+      "status": "passed",
+      "value": 1.0308072478779247e-11,
+      "tolerance": 1.05e-10
+    },
+    {
+      "name": "spatial_2d_semi_implicit_h16 published L2",
+      "status": "passed",
+      "value": 0.0005823523196976264,
+      "reference": 0.000582,
+      "tolerance": 5.049999999999999e-07
+    },
+    {
+      "name": "spatial_2d_semi_implicit_h16 published H1",
+      "status": "passed",
+      "value": 0.0176339465711829,
+      "reference": 0.0176,
+      "tolerance": 5.05e-05
+    },
+    {
+      "name": "spatial_3d_implicit_h4 boundary",
+      "status": "passed",
+      "value": 0.0,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "spatial_3d_implicit_h4 finite field",
+      "status": "passed"
+    },
+    {
+      "name": "spatial_3d_implicit_h4 Newton stopping",
+      "status": "passed",
+      "value": 8.473746055998318e-09,
+      "tolerance": 1e-08
+    },
+    {
+      "name": "spatial_3d_implicit_h4 true GMRES residual",
+      "status": "passed",
+      "value": 9.702748636081738e-11,
+      "tolerance": 1.05e-10
+    },
+    {
+      "name": "spatial_3d_implicit_h4 published L2",
+      "status": "passed",
+      "value": 0.0007993216984396111,
+      "reference": 0.000799,
+      "tolerance": 5.049999999999999e-07
+    },
+    {
+      "name": "spatial_3d_implicit_h4 published H1",
+      "status": "passed",
+      "value": 0.007982101195563274,
+      "reference": 0.00798,
+      "tolerance": 5.050000000000001e-06
+    },
+    {
+      "name": "spatial_3d_implicit_h8 boundary",
+      "status": "passed",
+      "value": 0.0,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "spatial_3d_implicit_h8 finite field",
+      "status": "passed"
+    },
+    {
+      "name": "spatial_3d_implicit_h8 Newton stopping",
+      "status": "passed",
+      "value": 3.408079102198909e-09,
+      "tolerance": 1e-08
+    },
+    {
+      "name": "spatial_3d_implicit_h8 true GMRES residual",
+      "status": "passed",
+      "value": 2.675168072615274e-11,
+      "tolerance": 1.05e-10
+    },
+    {
+      "name": "spatial_3d_implicit_h8 published L2",
+      "status": "passed",
+      "value": 0.000284971234865502,
+      "reference": 0.000285,
+      "tolerance": 5.049999999999999e-07
+    },
+    {
+      "name": "spatial_3d_implicit_h8 published H1",
+      "status": "passed",
+      "value": 0.004373427112954403,
+      "reference": 0.00437,
+      "tolerance": 5.050000000000001e-06
+    },
+    {
+      "name": "spatial_3d_semi_implicit_h4 boundary",
+      "status": "passed",
+      "value": 0.0,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "spatial_3d_semi_implicit_h4 finite field",
+      "status": "passed"
+    },
+    {
+      "name": "spatial_3d_semi_implicit_h4 Newton stopping",
+      "status": "passed",
+      "value": 4.172134191967467e-09,
+      "tolerance": 1e-08
+    },
+    {
+      "name": "spatial_3d_semi_implicit_h4 true GMRES residual",
+      "status": "passed",
+      "value": 9.891749615928858e-11,
+      "tolerance": 1.05e-10
+    },
+    {
+      "name": "spatial_3d_semi_implicit_h4 published L2",
+      "status": "passed",
+      "value": 0.0007993216984396108,
+      "reference": 0.000799,
+      "tolerance": 5.049999999999999e-07
+    },
+    {
+      "name": "spatial_3d_semi_implicit_h4 published H1",
+      "status": "passed",
+      "value": 0.007982101195563272,
+      "reference": 0.00798,
+      "tolerance": 5.050000000000001e-06
+    },
+    {
+      "name": "spatial_3d_semi_implicit_h8 boundary",
+      "status": "passed",
+      "value": 0.0,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "spatial_3d_semi_implicit_h8 finite field",
+      "status": "passed"
+    },
+    {
+      "name": "spatial_3d_semi_implicit_h8 Newton stopping",
+      "status": "passed",
+      "value": 3.672188912743154e-09,
+      "tolerance": 1e-08
+    },
+    {
+      "name": "spatial_3d_semi_implicit_h8 true GMRES residual",
+      "status": "passed",
+      "value": 2.6713164075770654e-11,
+      "tolerance": 1.05e-10
+    },
+    {
+      "name": "spatial_3d_semi_implicit_h8 published L2",
+      "status": "passed",
+      "value": 0.0002849712348655018,
+      "reference": 0.000285,
+      "tolerance": 5.049999999999999e-07
+    },
+    {
+      "name": "spatial_3d_semi_implicit_h8 published H1",
+      "status": "passed",
+      "value": 0.004373427112954402,
+      "reference": 0.00437,
+      "tolerance": 5.050000000000001e-06
+    },
+    {
+      "name": "temporal_2d_implicit_ell1_tau0.1 boundary",
+      "status": "passed",
+      "value": 0.0,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "temporal_2d_implicit_ell1_tau0.1 finite field",
+      "status": "passed"
+    },
+    {
+      "name": "temporal_2d_implicit_ell1_tau0.1 Newton stopping",
+      "status": "passed",
+      "value": 5.170666775608483e-09,
+      "tolerance": 1e-08
+    },
+    {
+      "name": "temporal_2d_implicit_ell1_tau0.1 true GMRES residual",
+      "status": "passed",
+      "value": 1.3744492714441557e-11,
+      "tolerance": 1.05e-10
+    },
+    {
+      "name": "temporal_2d_implicit_ell2_tau0.05 boundary",
+      "status": "passed",
+      "value": 0.0,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "temporal_2d_implicit_ell2_tau0.05 finite field",
+      "status": "passed"
+    },
+    {
+      "name": "temporal_2d_implicit_ell2_tau0.05 Newton stopping",
+      "status": "passed",
+      "value": 3.7181315512914267e-10,
+      "tolerance": 1e-08
+    },
+    {
+      "name": "temporal_2d_implicit_ell2_tau0.05 true GMRES residual",
+      "status": "passed",
+      "value": 1.1371093121254207e-11,
+      "tolerance": 1.05e-10
+    },
+    {
+      "name": "temporal_2d_implicit_ell3_tau0.025 boundary",
+      "status": "passed",
+      "value": 0.0,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "temporal_2d_implicit_ell3_tau0.025 finite field",
+      "status": "passed"
+    },
+    {
+      "name": "temporal_2d_implicit_ell3_tau0.025 Newton stopping",
+      "status": "passed",
+      "value": 3.499205896050267e-11,
+      "tolerance": 1e-08
+    },
+    {
+      "name": "temporal_2d_implicit_ell3_tau0.025 true GMRES residual",
+      "status": "passed",
+      "value": 7.062051583084095e-12,
+      "tolerance": 1.05e-10
+    },
+    {
+      "name": "temporal_2d_implicit_ell4_tau0.0125 boundary",
+      "status": "passed",
+      "value": 0.0,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "temporal_2d_implicit_ell4_tau0.0125 finite field",
+      "status": "passed"
+    },
+    {
+      "name": "temporal_2d_implicit_ell4_tau0.0125 Newton stopping",
+      "status": "passed",
+      "value": 7.84846405759642e-09,
+      "tolerance": 1e-08
+    },
+    {
+      "name": "temporal_2d_implicit_ell4_tau0.0125 true GMRES residual",
+      "status": "passed",
+      "value": 4.244924332305338e-12,
+      "tolerance": 1.05e-10
+    },
+    {
+      "name": "temporal_2d_semi_implicit_ell1_tau0.1 boundary",
+      "status": "passed",
+      "value": 0.0,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "temporal_2d_semi_implicit_ell1_tau0.1 finite field",
+      "status": "passed"
+    },
+    {
+      "name": "temporal_2d_semi_implicit_ell1_tau0.1 Newton stopping",
+      "status": "passed",
+      "value": 8.10584787515863e-09,
+      "tolerance": 1e-08
+    },
+    {
+      "name": "temporal_2d_semi_implicit_ell1_tau0.1 true GMRES residual",
+      "status": "passed",
+      "value": 1.4309335635797265e-11,
+      "tolerance": 1.05e-10
+    },
+    {
+      "name": "temporal_2d_semi_implicit_ell2_tau0.05 boundary",
+      "status": "passed",
+      "value": 0.0,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "temporal_2d_semi_implicit_ell2_tau0.05 finite field",
+      "status": "passed"
+    },
+    {
+      "name": "temporal_2d_semi_implicit_ell2_tau0.05 Newton stopping",
+      "status": "passed",
+      "value": 7.607426369277314e-09,
+      "tolerance": 1e-08
+    },
+    {
+      "name": "temporal_2d_semi_implicit_ell2_tau0.05 true GMRES residual",
+      "status": "passed",
+      "value": 1.2568814939771801e-11,
+      "tolerance": 1.05e-10
+    },
+    {
+      "name": "temporal_2d_semi_implicit_ell3_tau0.025 boundary",
+      "status": "passed",
+      "value": 0.0,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "temporal_2d_semi_implicit_ell3_tau0.025 finite field",
+      "status": "passed"
+    },
+    {
+      "name": "temporal_2d_semi_implicit_ell3_tau0.025 Newton stopping",
+      "status": "passed",
+      "value": 6.619080855892546e-09,
+      "tolerance": 1e-08
+    },
+    {
+      "name": "temporal_2d_semi_implicit_ell3_tau0.025 true GMRES residual",
+      "status": "passed",
+      "value": 1.0827222050726359e-11,
+      "tolerance": 1.05e-10
+    },
+    {
+      "name": "temporal_2d_semi_implicit_ell4_tau0.0125 boundary",
+      "status": "passed",
+      "value": 0.0,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "temporal_2d_semi_implicit_ell4_tau0.0125 finite field",
+      "status": "passed"
+    },
+    {
+      "name": "temporal_2d_semi_implicit_ell4_tau0.0125 Newton stopping",
+      "status": "passed",
+      "value": 9.323823253798071e-09,
+      "tolerance": 1e-08
+    },
+    {
+      "name": "temporal_2d_semi_implicit_ell4_tau0.0125 true GMRES residual",
+      "status": "passed",
+      "value": 9.248796630724705e-12,
+      "tolerance": 1.05e-10
+    },
+    {
+      "name": "temporal_3d_implicit_ell1_tau0.1 boundary",
+      "status": "passed",
+      "value": 0.0,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "temporal_3d_implicit_ell1_tau0.1 finite field",
+      "status": "passed"
+    },
+    {
+      "name": "temporal_3d_implicit_ell1_tau0.1 Newton stopping",
+      "status": "passed",
+      "value": 1.9787141753872998e-10,
+      "tolerance": 1e-08
+    },
+    {
+      "name": "temporal_3d_implicit_ell1_tau0.1 true GMRES residual",
+      "status": "passed",
+      "value": 8.199103640968553e-11,
+      "tolerance": 1.05e-10
+    },
+    {
+      "name": "temporal_3d_implicit_ell2_tau0.05 boundary",
+      "status": "passed",
+      "value": 0.0,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "temporal_3d_implicit_ell2_tau0.05 finite field",
+      "status": "passed"
+    },
+    {
+      "name": "temporal_3d_implicit_ell2_tau0.05 Newton stopping",
+      "status": "passed",
+      "value": 2.594566632401639e-11,
+      "tolerance": 1e-08
+    },
+    {
+      "name": "temporal_3d_implicit_ell2_tau0.05 true GMRES residual",
+      "status": "passed",
+      "value": 9.571865929550118e-11,
+      "tolerance": 1.05e-10
+    },
+    {
+      "name": "temporal_3d_implicit_ell3_tau0.025 boundary",
+      "status": "passed",
+      "value": 0.0,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "temporal_3d_implicit_ell3_tau0.025 finite field",
+      "status": "passed"
+    },
+    {
+      "name": "temporal_3d_implicit_ell3_tau0.025 Newton stopping",
+      "status": "passed",
+      "value": 4.411274608540777e-12,
+      "tolerance": 1e-08
+    },
+    {
+      "name": "temporal_3d_implicit_ell3_tau0.025 true GMRES residual",
+      "status": "passed",
+      "value": 5.646361843287052e-11,
+      "tolerance": 1.05e-10
+    },
+    {
+      "name": "temporal_3d_implicit_ell4_tau0.0125 boundary",
+      "status": "passed",
+      "value": 0.0,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "temporal_3d_implicit_ell4_tau0.0125 finite field",
+      "status": "passed"
+    },
+    {
+      "name": "temporal_3d_implicit_ell4_tau0.0125 Newton stopping",
+      "status": "passed",
+      "value": 8.782041739783805e-13,
+      "tolerance": 1e-08
+    },
+    {
+      "name": "temporal_3d_implicit_ell4_tau0.0125 true GMRES residual",
+      "status": "passed",
+      "value": 2.1881728573284815e-11,
+      "tolerance": 1.05e-10
+    },
+    {
+      "name": "temporal_3d_semi_implicit_ell1_tau0.1 boundary",
+      "status": "passed",
+      "value": 0.0,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "temporal_3d_semi_implicit_ell1_tau0.1 finite field",
+      "status": "passed"
+    },
+    {
+      "name": "temporal_3d_semi_implicit_ell1_tau0.1 Newton stopping",
+      "status": "passed",
+      "value": 3.901783172012176e-17,
+      "tolerance": 1e-08
+    },
+    {
+      "name": "temporal_3d_semi_implicit_ell1_tau0.1 true GMRES residual",
+      "status": "passed",
+      "value": 9.184295263351974e-11,
+      "tolerance": 1.05e-10
+    },
+    {
+      "name": "temporal_3d_semi_implicit_ell2_tau0.05 boundary",
+      "status": "passed",
+      "value": 0.0,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "temporal_3d_semi_implicit_ell2_tau0.05 finite field",
+      "status": "passed"
+    },
+    {
+      "name": "temporal_3d_semi_implicit_ell2_tau0.05 Newton stopping",
+      "status": "passed",
+      "value": 4.289469712568006e-17,
+      "tolerance": 1e-08
+    },
+    {
+      "name": "temporal_3d_semi_implicit_ell2_tau0.05 true GMRES residual",
+      "status": "passed",
+      "value": 6.881267533891851e-11,
+      "tolerance": 1.05e-10
+    },
+    {
+      "name": "temporal_3d_semi_implicit_ell3_tau0.025 boundary",
+      "status": "passed",
+      "value": 0.0,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "temporal_3d_semi_implicit_ell3_tau0.025 finite field",
+      "status": "passed"
+    },
+    {
+      "name": "temporal_3d_semi_implicit_ell3_tau0.025 Newton stopping",
+      "status": "passed",
+      "value": 3.8247402343179e-17,
+      "tolerance": 1e-08
+    },
+    {
+      "name": "temporal_3d_semi_implicit_ell3_tau0.025 true GMRES residual",
+      "status": "passed",
+      "value": 4.571319109087742e-11,
+      "tolerance": 1.05e-10
+    },
+    {
+      "name": "temporal_3d_semi_implicit_ell4_tau0.0125 boundary",
+      "status": "passed",
+      "value": 0.0,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "temporal_3d_semi_implicit_ell4_tau0.0125 finite field",
+      "status": "passed"
+    },
+    {
+      "name": "temporal_3d_semi_implicit_ell4_tau0.0125 Newton stopping",
+      "status": "passed",
+      "value": 7.78885576705966e-09,
+      "tolerance": 1e-08
+    },
+    {
+      "name": "temporal_3d_semi_implicit_ell4_tau0.0125 true GMRES residual",
+      "status": "passed",
+      "value": 2.164531901911745e-11,
+      "tolerance": 1.05e-10
+    },
+    {
+      "name": "fourier_3d_preview boundary",
+      "status": "passed",
+      "value": 0.0,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "fourier_3d_preview finite field",
+      "status": "passed"
+    },
+    {
+      "name": "fourier_3d_preview Newton stopping",
+      "status": "passed",
+      "value": 7.502402187787409e-09,
+      "tolerance": 1e-08
+    },
+    {
+      "name": "fourier_3d_preview true GMRES residual",
+      "status": "passed",
+      "value": 3.423641785730173e-12,
+      "tolerance": 1.05e-10
+    },
+    {
+      "name": "sphere_braudeau boundary",
+      "status": "passed",
+      "value": 0.0,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "sphere_braudeau finite field",
+      "status": "passed"
+    },
+    {
+      "name": "sphere_braudeau Newton stopping",
+      "status": "passed",
+      "value": 5.35737280514896e-15,
+      "tolerance": 1e-08
+    },
+    {
+      "name": "sphere_braudeau true GMRES residual",
+      "status": "passed",
+      "value": 4.570233736876916e-12,
+      "tolerance": 1.05e-10
+    },
+    {
+      "name": "sphere_garnier boundary",
+      "status": "passed",
+      "value": 0.0,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "sphere_garnier finite field",
+      "status": "passed"
+    },
+    {
+      "name": "sphere_garnier Newton stopping",
+      "status": "passed",
+      "value": 5.2033152485622146e-15,
+      "tolerance": 1e-08
+    },
+    {
+      "name": "sphere_garnier true GMRES residual",
+      "status": "passed",
+      "value": 4.342707603502561e-12,
+      "tolerance": 1.05e-10
+    },
+    {
+      "name": "dry_2d_preview boundary",
+      "status": "passed",
+      "value": 0.0,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "dry_2d_preview finite field",
+      "status": "passed"
+    },
+    {
+      "name": "dry_2d_preview Newton stopping",
+      "status": "passed",
+      "value": 9.864713824462461e-09,
+      "tolerance": 1e-08
+    }
+  ]
+}

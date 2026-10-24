@@ -1,0 +1,15 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+results/
+.pytest_cache/
+.DS_Store
+Thumbs.db
+*.log
+*.aux
+*.synctex.gz
+.env
+.env.*
+.ipynb_checkpoints/
+reviewer_parameters.json

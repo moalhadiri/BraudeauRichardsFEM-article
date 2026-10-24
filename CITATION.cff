@@ -1,0 +1,30 @@
+cff-version: 1.2.0
+message: "Please cite the accompanying article when using these numerical examples."
+type: software
+title: "Braudeau–Richards finite element examples"
+version: "1.0.0"
+date-released: "2026-10-24"
+authors:
+  - family-names: "Moelevou"
+    given-names: "Alhadiri"
+  - family-names: "Koko"
+    given-names: "Jonas"
+  - family-names: "Kane"
+    given-names: "Souleye"
+  - family-names: "Bacar"
+    given-names: "Abdoul-Hafar Halassi"
+preferred-citation:
+  type: article
+  title: "On the numerical resolution of a nonlinear Richards model in deformable porous media using a Newton method"
+  authors:
+    - family-names: "Moelevou"
+      given-names: "Alhadiri"
+    - family-names: "Koko"
+      given-names: "Jonas"
+    - family-names: "Kane"
+      given-names: "Souleye"
+    - family-names: "Bacar"
+      given-names: "Abdoul-Hafar Halassi"
+  year: 2026
+
+repository-code: "https://github.com/moalhadiri/BraudeauRichardsFEM-article"

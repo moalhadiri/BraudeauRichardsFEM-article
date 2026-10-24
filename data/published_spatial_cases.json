@@ -1,0 +1,674 @@
+{
+  "schema_version": 1,
+  "note": "These are rounded published values, not full-precision archived errors. A comparison should allow at least the last-digit rounding half-unit plus numerical solver tolerance. subdivisions=N means h=1/N and N+1 nodes per direction.",
+  "cases": [
+    {
+      "dimension": 2,
+      "scheme": "implicit",
+      "subdivisions": 4,
+      "nodes_per_direction": 5,
+      "h": "1/4",
+      "tau": 0.025,
+      "final_time": 0.5,
+      "relaxation": 1.0,
+      "reference": "stationary P",
+      "L2": {
+        "value": 0.00685,
+        "printed": "6.85\\times10^{-3}",
+        "rounding_half_unit": 5e-06
+      },
+      "H1": {
+        "value": 0.0663,
+        "printed": "6.63\\times10^{-2}",
+        "rounding_half_unit": 5e-05
+      },
+      "paper_table": 6,
+      "source_sha256": "605cfd5b52800bb607b9621c6e399d3fcd2427716492bad34d1d8ece91008ba2"
+    },
+    {
+      "dimension": 2,
+      "scheme": "implicit",
+      "subdivisions": 8,
+      "nodes_per_direction": 9,
+      "h": "1/8",
+      "tau": 0.025,
+      "final_time": 0.5,
+      "relaxation": 1.0,
+      "reference": "stationary P",
+      "L2": {
+        "value": 0.00218,
+        "printed": "2.18\\times10^{-3}",
+        "rounding_half_unit": 5e-06
+      },
+      "H1": {
+        "value": 0.035,
+        "printed": "3.50\\times10^{-2}",
+        "rounding_half_unit": 5e-05
+      },
+      "paper_table": 6,
+      "source_sha256": "605cfd5b52800bb607b9621c6e399d3fcd2427716492bad34d1d8ece91008ba2"
+    },
+    {
+      "dimension": 2,
+      "scheme": "implicit",
+      "subdivisions": 16,
+      "nodes_per_direction": 17,
+      "h": "1/16",
+      "tau": 0.025,
+      "final_time": 0.5,
+      "relaxation": 1.0,
+      "reference": "stationary P",
+      "L2": {
+        "value": 0.000582,
+        "printed": "5.82\\times10^{-4}",
+        "rounding_half_unit": 5e-07
+      },
+      "H1": {
+        "value": 0.0176,
+        "printed": "1.76\\times10^{-2}",
+        "rounding_half_unit": 5e-05
+      },
+      "paper_table": 6,
+      "source_sha256": "605cfd5b52800bb607b9621c6e399d3fcd2427716492bad34d1d8ece91008ba2"
+    },
+    {
+      "dimension": 2,
+      "scheme": "implicit",
+      "subdivisions": 32,
+      "nodes_per_direction": 33,
+      "h": "1/32",
+      "tau": 0.025,
+      "final_time": 0.5,
+      "relaxation": 1.0,
+      "reference": "stationary P",
+      "L2": {
+        "value": 0.000148,
+        "printed": "1.48\\times10^{-4}",
+        "rounding_half_unit": 5e-07
+      },
+      "H1": {
+        "value": 0.00883,
+        "printed": "8.83\\times10^{-3}",
+        "rounding_half_unit": 5e-06
+      },
+      "paper_table": 6,
+      "source_sha256": "605cfd5b52800bb607b9621c6e399d3fcd2427716492bad34d1d8ece91008ba2"
+    },
+    {
+      "dimension": 2,
+      "scheme": "implicit",
+      "subdivisions": 64,
+      "nodes_per_direction": 65,
+      "h": "1/64",
+      "tau": 0.025,
+      "final_time": 0.5,
+      "relaxation": 1.0,
+      "reference": "stationary P",
+      "L2": {
+        "value": 3.72e-05,
+        "printed": "3.72\\times10^{-5}",
+        "rounding_half_unit": 5e-08
+      },
+      "H1": {
+        "value": 0.00442,
+        "printed": "4.42\\times10^{-3}",
+        "rounding_half_unit": 5e-06
+      },
+      "paper_table": 6,
+      "source_sha256": "605cfd5b52800bb607b9621c6e399d3fcd2427716492bad34d1d8ece91008ba2"
+    },
+    {
+      "dimension": 2,
+      "scheme": "implicit",
+      "subdivisions": 128,
+      "nodes_per_direction": 129,
+      "h": "1/128",
+      "tau": 0.025,
+      "final_time": 0.5,
+      "relaxation": 1.0,
+      "reference": "stationary P",
+      "L2": {
+        "value": 9.3e-06,
+        "printed": "9.30\\times10^{-6}",
+        "rounding_half_unit": 5e-09
+      },
+      "H1": {
+        "value": 0.00221,
+        "printed": "2.21\\times10^{-3}",
+        "rounding_half_unit": 5e-06
+      },
+      "paper_table": 6,
+      "source_sha256": "605cfd5b52800bb607b9621c6e399d3fcd2427716492bad34d1d8ece91008ba2"
+    },
+    {
+      "dimension": 2,
+      "scheme": "implicit",
+      "subdivisions": 256,
+      "nodes_per_direction": 257,
+      "h": "1/256",
+      "tau": 0.025,
+      "final_time": 0.5,
+      "relaxation": 1.0,
+      "reference": "stationary P",
+      "L2": {
+        "value": 2.33e-06,
+        "printed": "2.33\\times10^{-6}",
+        "rounding_half_unit": 5e-09
+      },
+      "H1": {
+        "value": 0.0011,
+        "printed": "1.10\\times10^{-3}",
+        "rounding_half_unit": 5e-06
+      },
+      "paper_table": 6,
+      "source_sha256": "605cfd5b52800bb607b9621c6e399d3fcd2427716492bad34d1d8ece91008ba2"
+    },
+    {
+      "dimension": 2,
+      "scheme": "implicit",
+      "subdivisions": 512,
+      "nodes_per_direction": 513,
+      "h": "1/512",
+      "tau": 0.025,
+      "final_time": 0.5,
+      "relaxation": 1.0,
+      "reference": "stationary P",
+      "L2": {
+        "value": 5.82e-07,
+        "printed": "5.82\\times10^{-7}",
+        "rounding_half_unit": 5e-10
+      },
+      "H1": {
+        "value": 0.000552,
+        "printed": "5.52\\times10^{-4}",
+        "rounding_half_unit": 5e-07
+      },
+      "paper_table": 6,
+      "source_sha256": "605cfd5b52800bb607b9621c6e399d3fcd2427716492bad34d1d8ece91008ba2"
+    },
+    {
+      "dimension": 2,
+      "scheme": "semi-implicit",
+      "subdivisions": 4,
+      "nodes_per_direction": 5,
+      "h": "1/4",
+      "tau": 0.025,
+      "final_time": 0.5,
+      "relaxation": 1.0,
+      "reference": "stationary P",
+      "L2": {
+        "value": 0.00685,
+        "printed": "6.85\\times10^{-3}",
+        "rounding_half_unit": 5e-06
+      },
+      "H1": {
+        "value": 0.0663,
+        "printed": "6.63\\times10^{-2}",
+        "rounding_half_unit": 5e-05
+      },
+      "paper_table": 7,
+      "source_sha256": "605cfd5b52800bb607b9621c6e399d3fcd2427716492bad34d1d8ece91008ba2"
+    },
+    {
+      "dimension": 2,
+      "scheme": "semi-implicit",
+      "subdivisions": 8,
+      "nodes_per_direction": 9,
+      "h": "1/8",
+      "tau": 0.025,
+      "final_time": 0.5,
+      "relaxation": 1.0,
+      "reference": "stationary P",
+      "L2": {
+        "value": 0.00218,
+        "printed": "2.18\\times10^{-3}",
+        "rounding_half_unit": 5e-06
+      },
+      "H1": {
+        "value": 0.035,
+        "printed": "3.50\\times10^{-2}",
+        "rounding_half_unit": 5e-05
+      },
+      "paper_table": 7,
+      "source_sha256": "605cfd5b52800bb607b9621c6e399d3fcd2427716492bad34d1d8ece91008ba2"
+    },
+    {
+      "dimension": 2,
+      "scheme": "semi-implicit",
+      "subdivisions": 16,
+      "nodes_per_direction": 17,
+      "h": "1/16",
+      "tau": 0.025,
+      "final_time": 0.5,
+      "relaxation": 1.0,
+      "reference": "stationary P",
+      "L2": {
+        "value": 0.000582,
+        "printed": "5.82\\times10^{-4}",
+        "rounding_half_unit": 5e-07
+      },
+      "H1": {
+        "value": 0.0176,
+        "printed": "1.76\\times10^{-2}",
+        "rounding_half_unit": 5e-05
+      },
+      "paper_table": 7,
+      "source_sha256": "605cfd5b52800bb607b9621c6e399d3fcd2427716492bad34d1d8ece91008ba2"
+    },
+    {
+      "dimension": 2,
+      "scheme": "semi-implicit",
+      "subdivisions": 32,
+      "nodes_per_direction": 33,
+      "h": "1/32",
+      "tau": 0.025,
+      "final_time": 0.5,
+      "relaxation": 1.0,
+      "reference": "stationary P",
+      "L2": {
+        "value": 0.000148,
+        "printed": "1.48\\times10^{-4}",
+        "rounding_half_unit": 5e-07
+      },
+      "H1": {
+        "value": 0.00883,
+        "printed": "8.83\\times10^{-3}",
+        "rounding_half_unit": 5e-06
+      },
+      "paper_table": 7,
+      "source_sha256": "605cfd5b52800bb607b9621c6e399d3fcd2427716492bad34d1d8ece91008ba2"
+    },
+    {
+      "dimension": 2,
+      "scheme": "semi-implicit",
+      "subdivisions": 64,
+      "nodes_per_direction": 65,
+      "h": "1/64",
+      "tau": 0.025,
+      "final_time": 0.5,
+      "relaxation": 1.0,
+      "reference": "stationary P",
+      "L2": {
+        "value": 3.72e-05,
+        "printed": "3.72\\times10^{-5}",
+        "rounding_half_unit": 5e-08
+      },
+      "H1": {
+        "value": 0.00442,
+        "printed": "4.42\\times10^{-3}",
+        "rounding_half_unit": 5e-06
+      },
+      "paper_table": 7,
+      "source_sha256": "605cfd5b52800bb607b9621c6e399d3fcd2427716492bad34d1d8ece91008ba2"
+    },
+    {
+      "dimension": 2,
+      "scheme": "semi-implicit",
+      "subdivisions": 128,
+      "nodes_per_direction": 129,
+      "h": "1/128",
+      "tau": 0.025,
+      "final_time": 0.5,
+      "relaxation": 1.0,
+      "reference": "stationary P",
+      "L2": {
+        "value": 9.3e-06,
+        "printed": "9.30\\times10^{-6}",
+        "rounding_half_unit": 5e-09
+      },
+      "H1": {
+        "value": 0.00221,
+        "printed": "2.21\\times10^{-3}",
+        "rounding_half_unit": 5e-06
+      },
+      "paper_table": 7,
+      "source_sha256": "605cfd5b52800bb607b9621c6e399d3fcd2427716492bad34d1d8ece91008ba2"
+    },
+    {
+      "dimension": 2,
+      "scheme": "semi-implicit",
+      "subdivisions": 256,
+      "nodes_per_direction": 257,
+      "h": "1/256",
+      "tau": 0.025,
+      "final_time": 0.5,
+      "relaxation": 1.0,
+      "reference": "stationary P",
+      "L2": {
+        "value": 2.33e-06,
+        "printed": "2.33\\times10^{-6}",
+        "rounding_half_unit": 5e-09
+      },
+      "H1": {
+        "value": 0.0011,
+        "printed": "1.10\\times10^{-3}",
+        "rounding_half_unit": 5e-06
+      },
+      "paper_table": 7,
+      "source_sha256": "605cfd5b52800bb607b9621c6e399d3fcd2427716492bad34d1d8ece91008ba2"
+    },
+    {
+      "dimension": 2,
+      "scheme": "semi-implicit",
+      "subdivisions": 512,
+      "nodes_per_direction": 513,
+      "h": "1/512",
+      "tau": 0.025,
+      "final_time": 0.5,
+      "relaxation": 1.0,
+      "reference": "stationary P",
+      "L2": {
+        "value": 5.82e-07,
+        "printed": "5.82\\times10^{-7}",
+        "rounding_half_unit": 5e-10
+      },
+      "H1": {
+        "value": 0.000552,
+        "printed": "5.52\\times10^{-4}",
+        "rounding_half_unit": 5e-07
+      },
+      "paper_table": 7,
+      "source_sha256": "605cfd5b52800bb607b9621c6e399d3fcd2427716492bad34d1d8ece91008ba2"
+    },
+    {
+      "dimension": 3,
+      "scheme": "implicit",
+      "subdivisions": 4,
+      "nodes_per_direction": 5,
+      "h": "1/4",
+      "tau": 0.025,
+      "final_time": 0.5,
+      "relaxation": 1.0,
+      "reference": "stationary P",
+      "L2": {
+        "value": 0.000799,
+        "printed": "7.99\\times10^{-4}",
+        "rounding_half_unit": 5e-07
+      },
+      "H1": {
+        "value": 0.00798,
+        "printed": "7.98\\times10^{-3}",
+        "rounding_half_unit": 5e-06
+      },
+      "mean_newton": 1.8,
+      "max_newton": 3,
+      "paper_table": 11,
+      "source_sha256": "b54d1692bb475e0119164aeceeb75d9b1195635cd7caacd74837b081ff90df3d"
+    },
+    {
+      "dimension": 3,
+      "scheme": "implicit",
+      "subdivisions": 8,
+      "nodes_per_direction": 9,
+      "h": "1/8",
+      "tau": 0.025,
+      "final_time": 0.5,
+      "relaxation": 1.0,
+      "reference": "stationary P",
+      "L2": {
+        "value": 0.000285,
+        "printed": "2.85\\times10^{-4}",
+        "rounding_half_unit": 5e-07
+      },
+      "H1": {
+        "value": 0.00437,
+        "printed": "4.37\\times10^{-3}",
+        "rounding_half_unit": 5e-06
+      },
+      "mean_newton": 1.7,
+      "max_newton": 3,
+      "paper_table": 11,
+      "source_sha256": "b54d1692bb475e0119164aeceeb75d9b1195635cd7caacd74837b081ff90df3d"
+    },
+    {
+      "dimension": 3,
+      "scheme": "implicit",
+      "subdivisions": 16,
+      "nodes_per_direction": 17,
+      "h": "1/16",
+      "tau": 0.025,
+      "final_time": 0.5,
+      "relaxation": 1.0,
+      "reference": "stationary P",
+      "L2": {
+        "value": 7.9e-05,
+        "printed": "7.90\\times10^{-5}",
+        "rounding_half_unit": 5e-08
+      },
+      "H1": {
+        "value": 0.00222,
+        "printed": "2.22\\times10^{-3}",
+        "rounding_half_unit": 5e-06
+      },
+      "mean_newton": 1.6,
+      "max_newton": 3,
+      "paper_table": 11,
+      "source_sha256": "b54d1692bb475e0119164aeceeb75d9b1195635cd7caacd74837b081ff90df3d"
+    },
+    {
+      "dimension": 3,
+      "scheme": "implicit",
+      "subdivisions": 32,
+      "nodes_per_direction": 33,
+      "h": "1/32",
+      "tau": 0.025,
+      "final_time": 0.5,
+      "relaxation": 1.0,
+      "reference": "stationary P",
+      "L2": {
+        "value": 2.03e-05,
+        "printed": "2.03\\times10^{-5}",
+        "rounding_half_unit": 5e-08
+      },
+      "H1": {
+        "value": 0.00111,
+        "printed": "1.11\\times10^{-3}",
+        "rounding_half_unit": 5e-06
+      },
+      "mean_newton": 1.5,
+      "max_newton": 3,
+      "paper_table": 11,
+      "source_sha256": "b54d1692bb475e0119164aeceeb75d9b1195635cd7caacd74837b081ff90df3d"
+    },
+    {
+      "dimension": 3,
+      "scheme": "implicit",
+      "subdivisions": 64,
+      "nodes_per_direction": 65,
+      "h": "1/64",
+      "tau": 0.025,
+      "final_time": 0.5,
+      "relaxation": 1.0,
+      "reference": "stationary P",
+      "L2": {
+        "value": 5.11e-06,
+        "printed": "5.11\\times10^{-6}",
+        "rounding_half_unit": 5e-09
+      },
+      "H1": {
+        "value": 0.000558,
+        "printed": "5.58\\times10^{-4}",
+        "rounding_half_unit": 5e-07
+      },
+      "mean_newton": 1.45,
+      "max_newton": 3,
+      "paper_table": 11,
+      "source_sha256": "b54d1692bb475e0119164aeceeb75d9b1195635cd7caacd74837b081ff90df3d"
+    },
+    {
+      "dimension": 3,
+      "scheme": "implicit",
+      "subdivisions": 128,
+      "nodes_per_direction": 129,
+      "h": "1/128",
+      "tau": 0.025,
+      "final_time": 0.5,
+      "relaxation": 1.0,
+      "reference": "stationary P",
+      "L2": {
+        "value": 1.28e-06,
+        "printed": "1.28\\times10^{-6}",
+        "rounding_half_unit": 5e-09
+      },
+      "H1": {
+        "value": 0.000279,
+        "printed": "2.79\\times10^{-4}",
+        "rounding_half_unit": 5e-07
+      },
+      "mean_newton": 1.35,
+      "max_newton": 2,
+      "paper_table": 11,
+      "source_sha256": "b54d1692bb475e0119164aeceeb75d9b1195635cd7caacd74837b081ff90df3d"
+    },
+    {
+      "dimension": 3,
+      "scheme": "semi-implicit",
+      "subdivisions": 4,
+      "nodes_per_direction": 5,
+      "h": "1/4",
+      "tau": 0.025,
+      "final_time": 0.5,
+      "relaxation": 1.0,
+      "reference": "stationary P",
+      "L2": {
+        "value": 0.000799,
+        "printed": "7.99\\times10^{-4}",
+        "rounding_half_unit": 5e-07
+      },
+      "H1": {
+        "value": 0.00798,
+        "printed": "7.98\\times10^{-3}",
+        "rounding_half_unit": 5e-06
+      },
+      "mean_newton": 1.7,
+      "max_newton": 3,
+      "paper_table": 12,
+      "source_sha256": "c1e4d309f663efc49642a2c923b8e43ee7f7a508bb2c1b7240ff4b107216ef04"
+    },
+    {
+      "dimension": 3,
+      "scheme": "semi-implicit",
+      "subdivisions": 8,
+      "nodes_per_direction": 9,
+      "h": "1/8",
+      "tau": 0.025,
+      "final_time": 0.5,
+      "relaxation": 1.0,
+      "reference": "stationary P",
+      "L2": {
+        "value": 0.000285,
+        "printed": "2.85\\times10^{-4}",
+        "rounding_half_unit": 5e-07
+      },
+      "H1": {
+        "value": 0.00437,
+        "printed": "4.37\\times10^{-3}",
+        "rounding_half_unit": 5e-06
+      },
+      "mean_newton": 1.65,
+      "max_newton": 3,
+      "paper_table": 12,
+      "source_sha256": "c1e4d309f663efc49642a2c923b8e43ee7f7a508bb2c1b7240ff4b107216ef04"
+    },
+    {
+      "dimension": 3,
+      "scheme": "semi-implicit",
+      "subdivisions": 16,
+      "nodes_per_direction": 17,
+      "h": "1/16",
+      "tau": 0.025,
+      "final_time": 0.5,
+      "relaxation": 1.0,
+      "reference": "stationary P",
+      "L2": {
+        "value": 7.9e-05,
+        "printed": "7.90\\times10^{-5}",
+        "rounding_half_unit": 5e-08
+      },
+      "H1": {
+        "value": 0.00222,
+        "printed": "2.22\\times10^{-3}",
+        "rounding_half_unit": 5e-06
+      },
+      "mean_newton": 1.55,
+      "max_newton": 3,
+      "paper_table": 12,
+      "source_sha256": "c1e4d309f663efc49642a2c923b8e43ee7f7a508bb2c1b7240ff4b107216ef04"
+    },
+    {
+      "dimension": 3,
+      "scheme": "semi-implicit",
+      "subdivisions": 32,
+      "nodes_per_direction": 33,
+      "h": "1/32",
+      "tau": 0.025,
+      "final_time": 0.5,
+      "relaxation": 1.0,
+      "reference": "stationary P",
+      "L2": {
+        "value": 2.03e-05,
+        "printed": "2.03\\times10^{-5}",
+        "rounding_half_unit": 5e-08
+      },
+      "H1": {
+        "value": 0.00111,
+        "printed": "1.11\\times10^{-3}",
+        "rounding_half_unit": 5e-06
+      },
+      "mean_newton": 1.45,
+      "max_newton": 2,
+      "paper_table": 12,
+      "source_sha256": "c1e4d309f663efc49642a2c923b8e43ee7f7a508bb2c1b7240ff4b107216ef04"
+    },
+    {
+      "dimension": 3,
+      "scheme": "semi-implicit",
+      "subdivisions": 64,
+      "nodes_per_direction": 65,
+      "h": "1/64",
+      "tau": 0.025,
+      "final_time": 0.5,
+      "relaxation": 1.0,
+      "reference": "stationary P",
+      "L2": {
+        "value": 5.11e-06,
+        "printed": "5.11\\times10^{-6}",
+        "rounding_half_unit": 5e-09
+      },
+      "H1": {
+        "value": 0.000558,
+        "printed": "5.58\\times10^{-4}",
+        "rounding_half_unit": 5e-07
+      },
+      "mean_newton": 1.4,
+      "max_newton": 2,
+      "paper_table": 12,
+      "source_sha256": "c1e4d309f663efc49642a2c923b8e43ee7f7a508bb2c1b7240ff4b107216ef04"
+    },
+    {
+      "dimension": 3,
+      "scheme": "semi-implicit",
+      "subdivisions": 128,
+      "nodes_per_direction": 129,
+      "h": "1/128",
+      "tau": 0.025,
+      "final_time": 0.5,
+      "relaxation": 1.0,
+      "reference": "stationary P",
+      "L2": {
+        "value": 1.28e-06,
+        "printed": "1.28\\times10^{-6}",
+        "rounding_half_unit": 5e-09
+      },
+      "H1": {
+        "value": 0.000279,
+        "printed": "2.79\\times10^{-4}",
+        "rounding_half_unit": 5e-07
+      },
+      "mean_newton": 1.35,
+      "max_newton": 2,
+      "paper_table": 12,
+      "source_sha256": "c1e4d309f663efc49642a2c923b8e43ee7f7a508bb2c1b7240ff4b107216ef04"
+    }
+  ]
+}
