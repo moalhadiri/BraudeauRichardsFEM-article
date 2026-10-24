@@ -21,32 +21,32 @@ For repeatable results, the notebook uses the checked source revision shown in i
 <!-- BEGINEXAMPLERESULTS -->
 ## Computed results
 
-**26 calculations completed · 115/115 checks passed.** Newton stopping tolerance: `1e-8`.
+**28 calculations completed · 123/123 checks passed.** Newton stopping tolerance: `1e-8`.
 
-Last successful run: **2026-10-24T20:35:40+00:00**. Source revision: `5f0126301222`. Parameter fingerprint: `aae8b7d4ae62`.
+Last successful run: **2026-10-24T21:04:09+00:00**. Source revision: `3ddfda373130`. Parameter fingerprint: `ab2557a1ce9c`.
 
-Temporal validation: **T = 1**, **h = 1/9** in 2D and **h = 1/9** in 3D; time-step indices **ℓ = 1, 2, 3**.
+Temporal validation: **T = 1**, **h = 1/13** in 2D and **h = 1/13** in 3D; time-step indices **ℓ = 1, 2, 3**.
 
 <p align="center">
   <img src="images/slotted_sphere.png" width="850" alt="Computed three-dimensional pressure isosurfaces of the slotted sphere, with initial and final fields">
 </p>
 
-*Native P1 pressure isosurfaces at ψ = −3.29 cm, computed on the tetrahedral mesh at t = 0 and t = T, at true geometric scale. Braudeau: h/L = 1/16, τ = 0.05 h, T = 0.1 h, nx = 17; Garnier: h/L = 1/16, τ = 0.05 h, T = 0.1 h, nx = 17.*
+*Native P1 pressure isosurfaces at ψ = −3.29 cm, computed on the tetrahedral mesh at t = 0 and t = T, at true geometric scale. Braudeau: h/L = 1/13, τ = 0.025 h, T = 1 h, nx = 14; Garnier: h/L = 1/13, τ = 0.025 h, T = 1 h, nx = 14.*
 
 The table shows the finest spatial grid and smallest time step of each validation group. H¹ is the full norm.
 
 | Study | Scheme | h | ℓ | τ | L² error | H¹ error | Newton max |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| 2D spatial | Implicit | 1/16 | 3 | 1/40 | 5.823523e-4 | 1.763395e-2 | 3 |
-| 2D spatial | Semi-implicit | 1/16 | 3 | 1/40 | 5.823523e-4 | 1.763395e-2 | 3 |
-| 2D temporal | Implicit | 1/9 | 3 | 1/40 | 6.353148e-4 | 1.145151e-2 | 3 |
-| 2D temporal | Semi-implicit | 1/9 | 3 | 1/40 | 4.320047e-4 | 1.146767e-2 | 3 |
-| 3D spatial | Implicit | 1/8 | 3 | 1/40 | 2.849712e-4 | 4.373427e-3 | 3 |
-| 3D spatial | Semi-implicit | 1/8 | 3 | 1/40 | 2.849712e-4 | 4.373427e-3 | 3 |
-| 3D temporal | Implicit | 1/9 | 3 | 1/40 | 8.504627e-5 | 1.436968e-3 | 3 |
-| 3D temporal | Semi-implicit | 1/9 | 3 | 1/40 | 7.703710e-5 | 1.425998e-3 | 3 |
+| 2D spatial | Implicit | 1/13 | 3 | 1/40 | 8.721154e-4 | 2.167331e-2 | 3 |
+| 2D spatial | Semi-implicit | 1/13 | 3 | 1/40 | 8.721154e-4 | 2.167331e-2 | 3 |
+| 2D temporal | Implicit | 1/13 | 3 | 1/40 | 3.152053e-4 | 7.969594e-3 | 3 |
+| 2D temporal | Semi-implicit | 1/13 | 3 | 1/40 | 2.220553e-4 | 8.219058e-3 | 3 |
+| 3D spatial | Implicit | 1/13 | 3 | 1/40 | 1.175262e-4 | 2.727884e-3 | 3 |
+| 3D spatial | Semi-implicit | 1/13 | 3 | 1/40 | 1.175262e-4 | 2.727884e-3 | 3 |
+| 3D temporal | Implicit | 1/13 | 3 | 1/40 | 4.314142e-5 | 1.003452e-3 | 3 |
+| 3D temporal | Semi-implicit | 1/13 | 3 | 1/40 | 3.461570e-5 | 9.972601e-4 | 3 |
 
-[All 26 cases: JSON](data/latest_results.json) · [CSV](data/latest_results.csv)
+[All 28 cases: JSON](data/latest_results.json) · [CSV](data/latest_results.csv)
 
 To refresh these values locally, run `python test.py --no-show --update-readme`, then commit and push the generated README, image and data files. Visitor runs in Colab keep their results in their own session and do not publish to this repository.
 <!-- ENDEXAMPLERESULTS -->
